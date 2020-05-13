@@ -1,0 +1,82 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  List panel (deconstructed) - Component test
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        List panel (deconstructed)
+      </h1>
+
+      <p>The list panel, a component used in the A to Z page pattern could be refactored using a list border style and panel component.</p>
+
+      <h2>Styles</h2>
+      <h3>Typography > List</h3>
+      <p>A <code>nhsuk-list--border</code> variant would need adding to the list styles in typography.</p>
+
+      <ul class="nhsuk-list nhsuk-list--border">
+        <li>List item</li>
+        <li>List item</li>
+        <li><a href="#">List item as a link</a></li>
+        <li><a href="#">List item as a link</a></li>
+      </ul>
+
+      <h2>Components</h2>
+      <p>A panel already exists in the frontend (soon to refactored, and possibly changed to a card).</p>
+      <h3>Panel with label</h3>
+      
+      {{ panel({
+        "label": "Panel header",
+        "HTML": "<p>Panel content</p>"
+      }) }}
+
+      <h2>Pattern</h2>
+      <p>The <a href="https://service-manual.nhs.uk/design-system/patterns/a-to-z-page">A to Z page</a> pattern already exisits in the design system.</p>
+      <p>Combining a list border style and a panel means the code for the list-panel could be removed.</p> 
+      
+      {{ panel({
+        "label": "A",
+        "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
+        <li><a href='#'>AAA</a></li>
+        <li><a href='#'>AAA screening</a></li>
+      </ul>"
+      }) }}
+
+      {{ panel({
+        "label": "B",
+        "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
+        <li><a href='#'>Back pain</a></li>
+        <li><a href='#'>Bed bugs</a></li>
+      </ul>"
+      }) }}
+        
+    </div>  
+
+  </div>
+{% endblock %}

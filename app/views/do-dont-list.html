@@ -34,18 +34,11 @@
         Do and don't list (deconstructed)
       </h1>
 
-      <p>The do and don't list is currently a component in the NHS.UK frontend, but there is an argument to break down into styles, components and patterns.</p>
-      <p>The benefits of doing this include:</p>
-      <ul>
-        <li>reducing the size of the codebase, making it easier to maintain</li>
-        <li>increasing the flexibility of the design system</li>
-        <li>giving clearer context of usage, by adding design patterns</li>
-      </ul>
-      <p>Although, doing this would be a big breaking change, so needs to be carefully considered.</p>
+      <p>The do and don't list component could be refactored using a ticks and crosses list style and a panel component, and then used for multiple design patterns.</p>
 
       <h2>Styles</h2>
-      <h3>Typography - List</h3>
-      <p>A ticks and crosses variant would need adding to the list styles.</p>
+      <h3>Typography > List</h3>
+      <p>A ticks and crosses variant could be added to the list styles within typography.</p>
       <h4>Ticks</h4>
       <ul class="nhsuk-list nhsuk-list--tick">
           <li>
@@ -134,9 +127,11 @@
           "classes": "nhsuk-u-margin-top-0"
         }) }}
 
-        <h2>Pattern</h2>
-        <p>A combination of the styles, components and guidance in response to a particular problem make a pattern.</p>
-        <h3>Help users understand more easily what they should and shouldn't do (used on the NHS website)</h3>
+        <h2>Patterns</h2>
+        <p>The do and don't list guidance can be used for to make a design pattern.</p>
+        <p>Also, combining a ticks and crosses list style and a panel means the code for the do and don't list could be removed.</p> 
+
+        <h3>Help users understand more easily what they should and shouldn't do</h3>
 
         {{ panel({
           "label": "Do",
@@ -196,7 +191,7 @@
         </ul>"
         }) }}
 
-        <h3>Help users understand what they can and can't do (used on the NHS App)</h3>
+        <h3>Help users understand what they can and can't do</h3>
         
         {{ panel({
           "HTML": "<h3>Services you can access for Kevin</h3>
