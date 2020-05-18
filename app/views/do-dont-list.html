@@ -31,16 +31,17 @@
 
       <!-- Change the page title here -->
       <h1>
-        <span class="nhsuk-caption-l">Refactoring components</span>
+        <span class="nhsuk-caption-l">Components</span>
         Do and don't list
       </h1>
 
-      <p>The do and don't list component could be refactored using a ticks and crosses list style and a panel component, and then become multiple design patterns.</p>
+      <p>The do and don't list component could be refactored using the ticks and crosses list style and panel component, and made into a design pattern.</p>
+      <p>Combining the ticks and crosses list style with a panel means the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">do and don't list code</a> can be removed.</p> 
+      <p>The <a href="https://service-manual.nhs.uk/design-system/components/do-and-dont-lists">do and don't list guidance</a> can become a design pattern: "Help users understand more easily what they should and shouldn't do"</p>
 
       <h2>Styles</h2>
-      <h3>Typography > List</h3>
-      <p>A ticks and crosses variant could be added to the list styles within typography.</p>
-      <h4>Ticks</h4>
+      <p>The ticks and crosses list style would need adding to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
+      <h3>Ticks</h3>
       <ul class="nhsuk-list nhsuk-list--tick">
           <li>
             <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -62,7 +63,7 @@
           </li>
         </ul>
 
-        <h4>Crosses</h4>
+        <h3>Crosses</h3>
         <ul class="nhsuk-list nhsuk-list--cross">
           <li>
             <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
@@ -87,7 +88,7 @@
           </li>
         </ul>
 
-        <h4>Ticks and crosses</h4>
+        <h3>Ticks and crosses</h3>
         <ul class="nhsuk-list nhsuk-list--cross">
           <li>
             <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -111,7 +112,7 @@
         </ul>
 
         <h2>Components</h2>
-        <p>A panel already exists in the frontend (soon to refactored, and possibly changed to a card).</p>
+        <p>The panel component already exists in the NHS.UK frontend.</p>
         <h3>Panel with label</h3>
         
         {{ panel({
@@ -129,10 +130,9 @@
         }) }}
 
         <h2>Patterns</h2>
-        <p>The do and don't list guidance can be used for to make a design pattern.</p>
-        <p>Also, combining a ticks and crosses list style and a panel means the code for the do and don't list could be removed.</p> 
 
         <h3>Help users understand more easily what they should and shouldn't do</h3>
+        <p>Used on the NHS website.</p>
 
         {{ panel({
           "label": "Do",
@@ -193,6 +193,7 @@
         }) }}
 
         <h3>Help users understand what they can and can't do</h3>
+        <p>Used on the NHS App.</p>
         
         {{ panel({
           "HTML": "<h3>Services you can access for Kevin</h3>
