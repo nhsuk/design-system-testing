@@ -2,6 +2,7 @@
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
 // Components that are not in the NHS.UK frontend library
+@import 'components/example-callout';
 @import 'components/panel-confirmation';
 @import 'components/phase-banner';
 @import 'components/related-nav';
@@ -42,7 +43,7 @@ code {
   position: relative;
 }
 
-li code,
+code,
 p code {
   background: $color_nhsuk-white;
   border: 1px solid $nhsuk-border-color;
