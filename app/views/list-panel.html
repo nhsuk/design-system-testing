@@ -36,46 +36,59 @@
       </h1>
 
       <h2>Overview</h2>
-      <p>The list panel, a component used in the A to Z page pattern can be refactored using the list border style and panel component.</p>
+      <p>The list panel component, used in the A to Z page pattern could be refactored using the list border style and panel component, and all the <a href="https://nhsuk.github.io/nhsuk-frontend/components/list-panel/index.html">code for the list panel</a> could be removed.</p>
 
       <h2>Styles</h2>
       <h3>Typography > List</h3>
-      <p>The <code>nhsuk-list--border</code> style would need to be added to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
+      <p>The <code>nhsuk-list--border</code> style would need adding to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
 
-      <ul class="nhsuk-list nhsuk-list--border">
-        <li>List item</li>
-        <li>List item</li>
-        <li><a href="#">List item as a link</a></li>
-        <li><a href="#">List item as a link</a></li>
-      </ul>
+      <div class="app-example">
+        <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+        <ul class="nhsuk-list nhsuk-list--border">
+          <li>List item</li>
+          <li>List item</li>
+          <li><a href="#">List item as a link</a></li>
+          <li><a href="#">List item as a link</a></li>
+        </ul>
+      </div>
 
       <h2>Components</h2>
-      <p>The panel component already exists in the NHS.UK frontend.</p>
+      <p>The existing panel component can be used.</p>
       <h3>Panel with label</h3>
-      
-      {{ panel({
-        "label": "Panel header",
-        "HTML": "<p>Panel content</p>"
-      }) }}
+
+      <div class="app-example">
+        <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+        {{ panel({
+          "label": "Panel header",
+          "HTML": "<p>Panel content</p>"
+        }) }}
+      </div>
 
       <h2>Pattern</h2>
       <p>The <a href="https://service-manual.nhs.uk/design-system/patterns/a-to-z-page">A to Z page</a> pattern already exisits in the design system.</p>
-      <p>Combining the list border style with a panel means the list panel code can be removed.</p> 
-      
-      {{ panel({
-        "label": "A",
-        "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
-        <li><a href='#'>AAA</a></li>
-        <li><a href='#'>AAA screening</a></li>
-      </ul>"
-      }) }}
 
-      {{ panel({
-        "label": "B",
-        "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
-        <li><a href='#'>Back pain</a></li>
-        <li><a href='#'>Bed bugs</a></li>
-      </ul>"
+      <div class="app-example">
+        <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+        {{ panel({
+          "label": "A",
+          "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='#'>AAA</a></li>
+          <li><a href='#'>AAA screening</a></li>
+        </ul>"
+        }) }}
+
+        {{ panel({
+          "label": "B",
+          "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='#'>Back pain</a></li>
+          <li><a href='#'>Bed bugs</a></li>
+        </ul>"
+        }) }}
+      </div>
+
+      {{ backLink({
+        "href": "/",
+        "text": "Go back"
       }) }}
         
     </div>  

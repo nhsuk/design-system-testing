@@ -36,8 +36,8 @@
       </h1>
 
       <h2>Overview</h2>
-      <p>The do and don't list component could be refactored using the ticks and crosses list style and panel component, so the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">do and don't list code</a> could be removed.</p> 
-      <p>The <a href="https://service-manual.nhs.uk/design-system/components/do-and-dont-lists">do and don't list guidance</a> can then be rewritten as a design pattern.</p>
+      <p>The <a href="https://service-manual.nhs.uk/design-system/components/do-and-dont-lists">do and don't list</a> component could be refactored using the ticks and crosses list style and panel component, and all the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">do and don't list code</a> could be removed.</p> 
+      <p>The current component guidance could be rewritten into a design pattern.</p>
 
       <h2>Styles</h2>
       <p>The ticks and crosses list style would need adding to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
@@ -122,7 +122,7 @@
         
 
         <h2>Components</h2>
-        <p>Use the panel component, that already exists in the NHS.UK frontend.</p>
+        <p>The existing panel component can be used.</p>
         <h3>Panel with label</h3>
         <div class="app-example">
           <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
@@ -237,6 +237,11 @@
         "classes": "nhsuk-u-margin-top-0"
         }) }}
         </div>
+
+      {{ backLink({
+        "href": "/",
+        "text": "Go back"
+      }) }}
         
     </div>  
 
