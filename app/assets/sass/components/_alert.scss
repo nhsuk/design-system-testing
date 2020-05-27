@@ -1,0 +1,66 @@
+/* ==========================================================================
+   COMPONENTS / #alert
+   ========================================================================== */
+/**
+ * 1. Removes top margin from first element and bottom margin from last,
+ *    to ensure correct spacing within the component.
+ * 2. Restricts the width of the text to optimise the line length for
+ *    readability.
+ */
+
+$nhsuk-border-width-alert: 8px;
+
+.nhsuk-alert {
+  @include top-and-bottom(); /* [1] */
+  @include reading-width(); /* [2] */
+  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-padding(3);
+
+  border: 4px solid $color_nhsuk-blue;
+  font-weight: 600;
+  position: relative;
+
+  @include mq($media-type: print) {
+    border-color: $nhsuk-print-text-color;
+  }
+
+  .nhsuk-alert__heading {
+    @include nhsuk-responsive-margin(4, 'bottom');
+  }
+
+}
+
+.nhsuk-alert--icon {
+  padding-left: nhsuk-spacing(6);
+
+  @include mq($from: tablet) {
+    padding-left: nhsuk-spacing(8);
+  }
+}
+
+.nhsuk-alert__icon {
+  height: 28px;
+  left: 6px;
+  position: absolute;
+  top: 6px;
+  width: 28px;
+
+  @include mq($from: tablet) {
+    height: 34px;
+    left: 12px;
+    top: 12px;
+    width: 34px;
+  }
+}
+
+.nhsuk-alert--warning {
+  border-color: $color_nhsuk-warm-yellow;
+}
+
+.nhsuk-alert--error {
+  border-color: $color_nhsuk-red;
+}
+
+.nhsuk-alert--success {
+  border-color: $color_nhsuk-green;
+}

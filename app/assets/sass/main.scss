@@ -2,6 +2,7 @@
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
 // Components that are not in the NHS.UK frontend library
+@import 'components/alert';
 @import 'components/callout';
 @import 'components/example-callout';
 @import 'components/panel-confirmation';
