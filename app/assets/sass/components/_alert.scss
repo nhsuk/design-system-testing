@@ -30,6 +30,16 @@ $nhsuk-border-width-alert: 8px;
 
 }
 
+.nhsuk-icon__warning {
+  fill: $color_nhsuk-red;
+  padding: 4px;
+}
+
+.nhsuk-icon__information {
+  fill: $color_nhsuk-blue;
+  padding: 4px;
+}
+
 .nhsuk-alert--icon {
   padding-left: nhsuk-spacing(6);
 
@@ -54,10 +64,6 @@ $nhsuk-border-width-alert: 8px;
 }
 
 .nhsuk-alert--warning {
-  border-color: $color_nhsuk-warm-yellow;
-}
-
-.nhsuk-alert--error {
   border-color: $color_nhsuk-red;
 }
 
