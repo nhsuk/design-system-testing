@@ -19,6 +19,10 @@
     left: -1px;
     position: absolute;
     top: -1px;
+
+    > *:first-child {
+      margin-top: 0;
+    }
   }
   
   .app-example + h2 {

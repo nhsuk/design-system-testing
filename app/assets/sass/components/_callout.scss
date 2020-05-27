@@ -1,0 +1,48 @@
+/* ==========================================================================
+   COMPONENTS / #CALLOUT
+   ========================================================================== */
+/**
+ * 1. Removes top margin from first element and bottom margin from last,
+ *    to ensure correct spacing within the component.
+ * 2. Restricts the width of the text to optimise the line length for
+ *    readability.
+ */
+
+$nhsuk-border-width-inset-text: 8px;
+
+.nhsuk-callout {
+  @include top-and-bottom(); /* [1] */
+  @include reading-width(); /* [2] */
+  @include nhsuk-responsive-padding(5);
+
+  border-left: $nhsuk-border-width-inset-text solid $color_nhsuk-blue;
+  position: relative;
+
+  @include mq($media-type: print) {
+    border-color: $nhsuk-print-text-color;
+  }
+
+  .nhsuk-callout__heading {
+    @include nhsuk-responsive-margin(5, 'bottom');
+  }
+
+}
+
+.nhsuk-callout--blue {
+  background: $color_nhsuk-white;
+  border-top: $nhsuk-border-width-inset-text solid $color_nhsuk-blue;
+  border-bottom: 2px solid $color_nhsuk-grey-4;
+  border-left: 0;
+}
+
+.nhsuk-callout--urgent {
+  background: $color_nhsuk-white;
+  border-top: 12px solid $color_nhsuk-red;
+  border-bottom: 2px solid $color_nhsuk-grey-4;
+  border-left: 0;
+}
+
+.nhsuk-callout--immediate {
+  background: $color_nhsuk-white;
+  border: 12px solid $color_nhsuk-red;
+}
