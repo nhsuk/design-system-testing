@@ -80,3 +80,9 @@ p code {
 
   display: inline-block;
 }
+
+.nhsuk-link--unvisited {
+  &:visited {
+    color: $nhsuk-link-color;
+  }
+}
