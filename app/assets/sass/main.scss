@@ -66,3 +66,11 @@ p code {
 .nhsuk-u-remove-underline {
   text-decoration: none !important;
 }
+
+.nhsuk-u-color-white {
+  color: $color_nhsuk-white !important;
+}
+
+.nhsuk-button {
+  @include nhsuk-responsive-margin(4, 'bottom', $adjustment: $button-shadow-size);
+}

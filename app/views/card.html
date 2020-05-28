@@ -67,6 +67,24 @@
         </div>
       </div>
 
+      <h3>With an action link</h3>
+      
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading">Help improve the service manual</h3>
+          <p class="nhsuk-card__description">We’d welcome your feedback. Can you answer some questions about your visit today?</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Take survey</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <h3>With a link</h3>
       
       <div class="nhsuk-card">
@@ -74,7 +92,7 @@
         <div class="nhsuk-card__content">
           <h3 class="nhsuk-card__heading">Save a life: give blood</h3>
           <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
-          <a href="#" class="nhsuk-card__link">Register to give blood</a>
+          <a href="#" class="nhsuk-card__link">Find out more <span class="nhsuk-u-visually-hidden">registering to give blood</span></a>
         </div>
       </div>
 
@@ -101,24 +119,6 @@
           <h3 class="nhsuk-card__heading"><a href="#">Making digital services more inclusive</a></h3>
           <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-color">7 January 2020</p>
           <p class="nhsuk-card__description">The NHS digital service manual helps teams make their services more respectful and inclusive. But it’s not always easy to get it right as Sara Wilcox, the content designer on the team, explains.</p>
-        </div>
-      </div>
-
-      <h3>With an action link</h3>
-      
-      <div class="nhsuk-card">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading">Help improve the service manual</h3>
-          <p class="nhsuk-card__description">We’d welcome your feedback. Can you answer some questions about your visit today?</p>
-          <div class="nhsuk-action-link">
-            <a class="nhsuk-action-link__link" href="https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551">
-              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-              </svg>
-              <span class="nhsuk-action-link__text">Take survey</span>
-            </a>
-          </div>
         </div>
       </div>
 
@@ -167,26 +167,121 @@
         <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           <div class="nhsuk-card">
             <div class="nhsuk-card__content">
-              <h3 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">17</h3>
-              <p class="nhsuk-card__description"><a href="#">Applicants</a></p>
+              <h3 class="nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">17</h3>
+              <p><a href="#">Applicants</a></p>
             </div>
           </div>
         </div>
         <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           <div class="nhsuk-card">
             <div class="nhsuk-card__content">
-              <h3 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">34</h3>
-              <p class="nhsuk-card__description">Jobs</p>
+              <h3 class="nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">34</h3>
+              <p><a href="#">Jobs</a></p>
             </div>
           </div>
         </div>
         <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
           <div class="nhsuk-card">
             <div class="nhsuk-card__content">
-              <h3 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">3</h3>
-              <p class="nhsuk-card__description">Messages</p>
+              <h3 class="nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">3</h3>
+              <p><a href="#">Messages</a></p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <h3>Changing the heading level</h3>
+
+      <p>Using a <code>h2</code>:</p>
+      
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h2 class="nhsuk-card__heading">Save a life: give blood</h2>
+          <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
+        </div>
+      </div>
+
+      <h3>Changing the heading size</h3>
+
+      <p>Using a <code>h4</code> with <code>nhsuk-heading-l</code> class to make it bigger:</p>
+
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h4 class="nhsuk-card__heading nhsuk-heading-l">Save a life: give blood</h4>
+          <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
+        </div>
+      </div>
+
+      <h3>Feature header</h3>
+      
+      <div class="nhsuk-card nhsuk-card--feature">
+        <div class="nhsuk-card__content nhsuk-card__content--feature">
+          <h3 class="nhsuk-card__heading nhsuk-card__heading--feature">Do</h3>
+          <ul class="nhsuk-list nhsuk-list--tick">
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+              </svg>
+              tick
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+              </svg>
+              tick
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+              </svg>
+              tick
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nhsuk-card nhsuk-card--feature">
+        <div class="nhsuk-card__content nhsuk-card__content--feature">
+          <h3 class="nhsuk-card__heading nhsuk-card__heading--feature">Don't</h3>
+          <ul class="nhsuk-list nhsuk-list--cross">
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+              </svg>
+              cross
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+              </svg>
+              cross
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
+                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
+              </svg>
+              cross
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Interruption card</h3>
+      
+      <div class="nhsuk-card nhsuk-card--interruption">
+        <div class="nhsuk-card__content">
+          <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-m nhsuk-u-color-white nhsuk-u-margin-bottom-2">Ask a health professional for advice</span>
+            This is a connected service
+          </h1>
+          <p>Your GP surgery has chosen this online consultation service provided by <strong>DoctorLink</strong>.</p>
+          <form action="" method="post">
+            <input type="submit" class="nhsuk-button nhsuk-button--reverse" value="Continue">
+          </form>
+          <p><a id="privacyNoticeLink" target="_blank" rel="noopener noreferrer" href="/privacynotice"><!-- react-text: 44 -->How your data will be processed using this service<!-- /react-text --><span class="nhsuk-u-visually-hidden"> - Page opens in new window</span></a><span aria-hidden="true"> (opens in new window).</span></p>
         </div>
       </div>
 
