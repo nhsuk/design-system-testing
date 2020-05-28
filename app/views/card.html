@@ -41,21 +41,11 @@
 
       <h3>Basic</h3>
       
-      <div class="nhsuk-card">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading">Save a life: give blood</h3>
-          <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
-        </div>
-      </div>
+      {% include "includes/card-variants/basic.html" %}
 
       <h3>Heading as a link</h3>
       
-      <div class="nhsuk-card">
-        <div class="nhsuk-card__content">
-          <h3 class="nhsuk-card__heading"><a href="#">Introduction to care and support</a></h3>
-          <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers.</p>
-        </div>
-      </div>
+      {% include "includes/card-variants/heading-link.html" %}
 
       <h3>With an image</h3>
       
@@ -119,6 +109,17 @@
           <h3 class="nhsuk-card__heading"><a href="#">Making digital services more inclusive</a></h3>
           <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-color">7 January 2020</p>
           <p class="nhsuk-card__description">The NHS digital service manual helps teams make their services more respectful and inclusive. But it’s not always easy to get it right as Sara Wilcox, the content designer on the team, explains.</p>
+        </div>
+      </div>
+
+      <h3>With a heading caption</h3>
+      
+      <div class="nhsuk-card">
+        <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+        <div class="nhsuk-card__content">
+          <span class="nhsuk-caption-m">Healthy living</span>
+          <h3 class="nhsuk-card__heading"><a href="#">5 steps to mental wellbeing</a></h3>
+          <p class="nhsuk-card__description">Practical advice to help you feel mentally and emotionally better.</p>
         </div>
       </div>
 
@@ -192,7 +193,7 @@
 
       <h3>Changing the heading level</h3>
 
-      <p>Using a <code>h2</code>:</p>
+      <p>A <code>h2</code> heading:</p>
       
       <div class="nhsuk-card">
         <div class="nhsuk-card__content">
@@ -203,13 +204,27 @@
 
       <h3>Changing the heading size</h3>
 
-      <p>Using a <code>h4</code> with <code>nhsuk-heading-l</code> class to make it bigger:</p>
+      <p>A <code>h4</code> heading with the <code>nhsuk-heading-l</code> class to make it bigger:</p>
 
       <div class="nhsuk-card">
         <div class="nhsuk-card__content">
           <h4 class="nhsuk-card__heading nhsuk-heading-l">Save a life: give blood</h4>
           <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
         </div>
+      </div>
+
+      <h3>With a grey background</h3>
+      
+      <div style="background: white; padding: 32px; margin-bottom: 24px;">
+
+        <div class="nhsuk-card nhsuk-card--grey">
+          <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+          <div class="nhsuk-card__content">
+            <h3 class="nhsuk-card__heading"><a href="#">Introduction to care and support</a></h3>
+            <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers.</p>
+          </div>
+        </div>
+
       </div>
 
       <h3>Feature header</h3>
@@ -269,14 +284,21 @@
         </div>
       </div>
 
+      <h3>Confirmation card</h3>
+      
+      <div class="nhsuk-card nhsuk-card--confirmation">
+        <div class="nhsuk-card__content">
+          <h1 class="nhsuk-card__heading">Application complete</h1>
+          <p>Your reference number<br> <strong class="nhsuk-u-font-size-24">HDJ2123F</strong></p>
+        </div>
+      </div>
+
       <h3>Interruption card</h3>
       
       <div class="nhsuk-card nhsuk-card--interruption">
         <div class="nhsuk-card__content">
-          <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">
-            <span class="nhsuk-caption-m nhsuk-u-color-white nhsuk-u-margin-bottom-2">Ask a health professional for advice</span>
-            This is a connected service
-          </h1>
+          <span class="nhsuk-caption-m nhsuk-u-color-white nhsuk-u-margin-bottom-2">Ask a health professional for advice</span>
+          <h1 class="nhsuk-card__heading nhsuk-u-margin-bottom-4">This is a connected service</h1>
           <p>Your GP surgery has chosen this online consultation service provided by <strong>DoctorLink</strong>.</p>
           <form action="" method="post">
             <input type="submit" class="nhsuk-button nhsuk-button--reverse" value="Continue">
