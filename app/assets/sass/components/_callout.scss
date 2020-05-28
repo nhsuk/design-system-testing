@@ -13,7 +13,7 @@ $nhsuk-border-width-callout: 8px;
 .nhsuk-callout {
   @include top-and-bottom(); /* [1] */
   @include reading-width(); /* [2] */
-  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(6, 'bottom');
   @include nhsuk-responsive-padding(4);
 
   border-left: $nhsuk-border-width-callout solid $color_nhsuk-blue;
@@ -23,30 +23,28 @@ $nhsuk-border-width-callout: 8px;
     border-color: $nhsuk-print-text-color;
   }
 
-  .nhsuk-callout__heading {
-    @include nhsuk-responsive-margin(4, 'bottom');
-  }
+}
 
+.nhsuk-callout__section-break {
+  @include nhsuk-responsive-margin(4, 'bottom');
+  @include nhsuk-responsive-margin(4, 'top');
+  border-color: $color_nhsuk-blue;
 }
 
 .nhsuk-callout--notice {
-  border: 2px solid $color_nhsuk-blue;
-  border-left: $nhsuk-border-width-callout solid $color_nhsuk-blue;
+  border: 4px solid $color_nhsuk-blue;
 }
 
 .nhsuk-callout--warning {
   background: tint($color_nhsuk-yellow, 70%);
-  border: 2px solid $color_nhsuk-yellow;
-  border-left: $nhsuk-border-width-callout solid $color_nhsuk-yellow;
+  border: 4px solid $color_nhsuk-yellow;
 }
 
 .nhsuk-callout--urgent {
-  background: $color_nhsuk-white;
-  border: 2px solid $color_nhsuk-red;
-  border-left: $nhsuk-border-width-callout solid $color_nhsuk-red;
+  border: 8px solid $color_nhsuk-red;
 }
 
 .nhsuk-callout--immediate {
   background: $color_nhsuk-white;
-  border: $nhsuk-border-width-callout solid $color_nhsuk-red;
+  border: 12px solid $color_nhsuk-red;
 }

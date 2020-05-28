@@ -1,0 +1,195 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Card - Refactoring components
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        <span class="nhsuk-caption-l">New component</span>
+        Card
+      </h1>
+
+      <p class="nhsuk-lede-text">Use the card component to provide a brief summary of content or a task, often with a link to more detail.</p>
+
+      <h2>Variants</h2>
+
+      <h3>Basic</h3>
+      
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading">Save a life: give blood</h3>
+          <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
+        </div>
+      </div>
+
+      <h3>Heading as a link</h3>
+      
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading"><a href="#">Introduction to care and support</a></h3>
+          <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers.</p>
+        </div>
+      </div>
+
+      <h3>With an image</h3>
+      
+      <div class="nhsuk-card">
+        <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading"><a href="#">Introduction to care and support</a></h3>
+          <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers.</p>
+        </div>
+      </div>
+
+      <h3>With a link</h3>
+      
+      <div class="nhsuk-card">
+        <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading">Save a life: give blood</h3>
+          <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
+          <a href="#" class="nhsuk-card__link">Register to give blood</a>
+        </div>
+      </div>
+
+      <h3>With multiple links</h3>
+      
+      <div class="nhsuk-card">
+        <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading"><a href="#">Healthy living</a></h3>
+          <p class="nhsuk-card__description">Advice, tips and tools to help you make the best choices about your health and wellbeing.</p>
+          <ul class="nhsuk-list">
+            <li><a href="#">Lose weight</a></li>
+            <li><a href="#">Eat well</a></li>
+            <li><a href="#">Exercise</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>With metadata</h3>
+      
+      <div class="nhsuk-card">
+        <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading"><a href="#">Making digital services more inclusive</a></h3>
+          <p class="nhsuk-card__metadata nhsuk-body-s nhsuk-u-secondary-text-color">7 January 2020</p>
+          <p class="nhsuk-card__description">The NHS digital service manual helps teams make their services more respectful and inclusive. But it’s not always easy to get it right as Sara Wilcox, the content designer on the team, explains.</p>
+        </div>
+      </div>
+
+      <h3>With an action link</h3>
+      
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading">Help improve the service manual</h3>
+          <p class="nhsuk-card__description">We’d welcome your feedback. Can you answer some questions about your visit today?</p>
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" href="https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Take survey</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Group of cards</h3>
+
+      <div class="nhsuk-grid-row nhsuk-card-group">
+        <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading"><a href="#">Introduction to care and support</a></h3>
+              <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading"><a href="#">Help from social services and charities</a></h3>
+              <p class="nhsuk-card__description">Includes helplines, needs assessments, advocacy and reporting abuse.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading"><a href="#">Money, work and benefits</a></h3>
+              <p class="nhsuk-card__description">How to pay for care and support, and where you can get help with costs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <img class="nhsuk-card__img" src="/images/placeholder-image-16-9.jpg" alt="">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading"><a href="#">Care after a hospital stay</a></h3>
+              <p class="nhsuk-card__description">Includes hospital discharge and care and support afterwards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row nhsuk-card-group">
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">17</h3>
+              <p class="nhsuk-card__description"><a href="#">Applicants</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">34</h3>
+              <p class="nhsuk-card__description">Jobs</p>
+            </div>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h3 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">3</h3>
+              <p class="nhsuk-card__description">Messages</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>  
+  </div>
+{% endblock %}

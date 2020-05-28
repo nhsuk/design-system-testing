@@ -4,6 +4,7 @@
 // Components that are not in the NHS.UK frontend library
 @import 'components/alert';
 @import 'components/callout';
+@import 'components/card';
 @import 'components/example-callout';
 @import 'components/panel-confirmation';
 @import 'components/phase-banner';
@@ -51,4 +52,17 @@ p code {
   border: 1px solid $nhsuk-border-color;
   padding: nhsuk-spacing(1) nhsuk-spacing(3);
   font-size: 0.8em;
+}
+
+.nhsuk-do-dont-list {
+  border-bottom: 2px solid $color_nhsuk-grey-4;
+}
+
+.nhsuk-image {
+  @include nhsuk-responsive-margin(6, 'bottom');
+  margin-top: 0;
+}
+
+.nhsuk-u-remove-underline {
+  text-decoration: none !important;
 }
