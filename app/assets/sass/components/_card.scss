@@ -73,14 +73,8 @@
   position: relative;
 }
 
-.nhsuk-card__heading {
-  margin-bottom: nhsuk-spacing(3);
-}
-
-.nhsuk-card__metadata {
-  margin-bottom: nhsuk-spacing(3);
-}
-
+.nhsuk-card__heading,
+.nhsuk-card__metadata,
 .nhsuk-card__description {
   margin-bottom: nhsuk-spacing(3);
 }

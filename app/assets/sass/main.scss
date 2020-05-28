@@ -74,3 +74,9 @@ p code {
 .nhsuk-button {
   @include nhsuk-responsive-margin(4, 'bottom', $adjustment: $button-shadow-size);
 }
+
+.nhsuk-link {
+  @include nhsuk-font($size: 19);
+
+  display: inline-block;
+}
