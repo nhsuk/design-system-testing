@@ -16,7 +16,7 @@ $nhsuk-border-width-alert: 8px;
   @include nhsuk-responsive-margin(5, 'bottom');
   @include nhsuk-responsive-padding(3);
 
-  border: 4px solid $color_nhsuk-blue;
+  border: nhsuk-spacing(1) solid $color_nhsuk-blue;
   font-weight: 600;
   position: relative;
 
