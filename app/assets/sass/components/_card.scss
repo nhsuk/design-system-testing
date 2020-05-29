@@ -57,6 +57,7 @@ $color_nhsuk-interruption-blue: #05538e;
   background: $color_nhsuk-white;
   box-shadow: 0 $card-shadow-width 0 0 $color_nhsuk-grey-4;
   outline: $card-shadow-width solid transparent; /* [1] */
+  position: relative;
   width: 100%;
 }
 
@@ -119,7 +120,8 @@ $color_nhsuk-interruption-blue: #05538e;
   }
 
   &:active {
-    box-shadow: 0 0 0 $card-hover-shadow-width $color_nhsuk-grey-3;
+    box-shadow: 0 0 0 $card-hover-shadow-width $color_nhsuk-grey-4;
+    bottom: - $card-hover-shadow-width;
   }
 }
 
