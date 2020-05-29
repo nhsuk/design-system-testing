@@ -133,6 +133,28 @@ $color_nhsuk-interruption-blue: #05538e;
   background: $color_nhsuk-grey-5;
 }
 
+/* Card video
+  ========================================================================== */
+
+.nhsuk-card__video {
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe,
+  object,
+  embed {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
 /* Card feature
    ========================================================================== */
 
@@ -141,6 +163,8 @@ $color_nhsuk-interruption-blue: #05538e;
 }
 
 .nhsuk-card__heading--feature {
+  @include nhsuk-font($size: 24, $weight: bold);
+
   background: $color_nhsuk-blue;
   color: $color_nhsuk-white;
   display: inline-block;
