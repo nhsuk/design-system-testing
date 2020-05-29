@@ -14,7 +14,6 @@ $nhsuk-border-width-callout: 8px;
   @include top-and-bottom(); /* [1] */
   @include reading-width(); /* [2] */
   @include nhsuk-responsive-margin(6, 'bottom');
-  @include nhsuk-responsive-margin(6, 'top');
   @include nhsuk-responsive-padding(4);
 
   border-left: $nhsuk-border-width-callout solid $color_nhsuk-blue;
