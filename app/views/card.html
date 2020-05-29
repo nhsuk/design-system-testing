@@ -34,11 +34,23 @@
         Card
       </h1>
 
-      <p class="nhsuk-lede-text">Use the card component to provide a brief summary of content or a task, often with a link to more detail.</p>
+      <p class="nhsuk-lede-text">Demonstation of a card component that can be configured a number of ways using BEM modifiers.</p>
 
-      <h2>Variants</h2>
+      <h2>Related work</h2>
+      <ul>
+        <li><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/159">Panel (card) backlog issue (GitHub)</a></li>
+        <li><a href="https://github.com/nhsuk/nhsuk-frontend/pull/571">Combining promo and panel component pull request (GitHub)</a></li>
+        <li><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/241">New pattern: Stop users in a journey to tell them important information (GitHub)</a></li>
+        <li><a href="https://docs.google.com/document/d/1GNi7WO9Cunm7f7tTqrzZehH1UW4Q84-Y-tsk4h7BuPk/edit#">Panel (Card) contribution meeting (Google Docs)</a></li>
+      </ul>
 
-      <h3>Basic</h3>
+      <h2>When to use a card</h2>
+
+      <p>Use a card component to provide a brief summary of content or a task, often with a link to more detail.</p>
+
+      <h2>Card variations</h2>
+
+      <h3>Basic card</h3>
       
       {% include "includes/card-variants/basic.html" %}
 
@@ -56,7 +68,7 @@
         </div>
       </div>
 
-      <h3>With an action link</h3>
+      <h3>Basic card with an action link</h3>
       
       <div class="nhsuk-card">
         <div class="nhsuk-card__content">
@@ -122,7 +134,7 @@
         </div>
       </div>
 
-      <h3>With a video</h3>
+      <h3>Video card</h3>
       
       <div class="nhsuk-card">
         <div class="nhsuk-card__video">
@@ -262,7 +274,8 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <h3>With a grey background</h3>
+      <h3>Grey card</h3>
+      <p>An alternative for cards used on a white bckground.</p>
       
       <div style="background: white; padding: 32px; margin-bottom: 24px;">
 
@@ -276,9 +289,9 @@
 
       </div>
 
-      <h3>Feature heading</h3>
+      <h3>Feature card</h3>
 
-      <p>This will replace the do and don't list component code. The do and don't list component guidance to be <a href="/do-dont-list">re-writtem into a design pattern</a>.</p>
+      <p>Proposing to use this to replace the do and don't list component code and rewrite the <a href="/do-dont-list">do and don't list component guidance as a design pattern</a>.</p>
 
       <div class="nhsuk-card nhsuk-card--feature">
         <div class="nhsuk-card__content nhsuk-card__content--feature">
@@ -335,7 +348,7 @@
         </div>
       </div>
 
-      <p>This will replace the list panel component code. The list panel guidance will be included within the <a href="https://service-manual.nhs.uk/design-system/patterns/a-to-z-page">A to Z page pattern</a> guidance.</p>
+      <p>Also, replace the list panel component code and include an example on the <a href="https://service-manual.nhs.uk/design-system/patterns/a-to-z-page">A to Z page pattern</a> guidance.</p>
 
       <div class="nhsuk-card nhsuk-card--feature">
         <div class="nhsuk-card__content nhsuk-card__content--feature">
@@ -348,6 +361,7 @@
       </div>
 
       <h3>Confirmation card</h3>
+      <p>Proposing to use this on <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/144">Confirmation pages</a>.</p>
       
       <div class="nhsuk-card nhsuk-card--confirmation">
         <div class="nhsuk-card__content">
@@ -357,6 +371,7 @@
       </div>
 
       <h3>Interruption card</h3>
+      <p>Proposing to use this for the <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/241">Stop users in a journey to tell them important information pattern</a>.</p>
       
       <div class="nhsuk-card nhsuk-card--interruption">
         <div class="nhsuk-card__content">
@@ -372,7 +387,8 @@
 
       <h2>Accessibility</h2>
 
-      <p>Changing the heading levels, for example a <code>h2</code>.</p>
+      <p>You can change the level of the heading to <a href="https://service-manual.nhs.uk/accessibility/design#use-headings-correctly">make sure your headings reflect the page structure</a>.</p>
+      <p>Here's an example of replacing the default <code>h3</code> heading with a <code>h2</code>:</p>
       
       <div class="nhsuk-card">
         <div class="nhsuk-card__content">
@@ -381,11 +397,12 @@
         </div>
       </div>
 
-      <p>Changing the heading size, using helper classes. For example, using a <code>h4</code> heading with the <code>nhsuk-heading-l</code> class to make it bigger.</p>
+      <p>You can change the size of the heading using <a href="https://service-manual.nhs.uk/design-system/styles/typography#headings">heading typography styles</a>.</p>
+      <p>Here's an example of a <code>h2</code> with a <code>nhsuk-heading-l</code> class to reduce the heading size.</p>
 
       <div class="nhsuk-card">
         <div class="nhsuk-card__content">
-          <h4 class="nhsuk-card__heading nhsuk-heading-l">Save a life: give blood</h4>
+          <h2 class="nhsuk-card__heading nhsuk-heading-m">Save a life: give blood</h2>
           <p class="nhsuk-card__description">Please register today. Donating blood is easy, and saves lives.</p>
         </div>
       </div>
