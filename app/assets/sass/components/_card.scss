@@ -52,12 +52,12 @@ $card-hover-shadow-width: 4px;
 $color_nhsuk-interruption-blue: #05538e;
 
 .nhsuk-card {
-  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(6, 'bottom');
+  @include nhsuk-responsive-margin(6, 'top');
 
   background: $color_nhsuk-white;
   box-shadow: 0 $card-shadow-width 0 0 $color_nhsuk-grey-4;
   outline: $card-shadow-width solid transparent; /* [1] */
-  position: relative;
   width: 100%;
 }
 
@@ -157,10 +157,6 @@ $color_nhsuk-interruption-blue: #05538e;
 /* Card feature
    ========================================================================== */
 
-.nhsuk-card--feature {
-  @include nhsuk-responsive-margin(6, 'top');
-}
-
 .nhsuk-card__heading--feature {
   @include nhsuk-font($size: 24, $weight: bold);
 
@@ -197,6 +193,7 @@ $color_nhsuk-interruption-blue: #05538e;
 .nhsuk-card--confirmation,
 .nhsuk-card--interruption {
   color: $color_nhsuk-white;
+  margin-top: 0;
 
   .nhsuk-card__caption {
     color: $color_nhsuk-white;
@@ -218,10 +215,16 @@ $color_nhsuk-interruption-blue: #05538e;
 
 .nhsuk-card-group {
   @include flex();
+  @include nhsuk-responsive-margin(2, 'bottom');  
 }
 
 .nhsuk-card-group__item {
   @include flex-item();
+
+  .nhsuk-card {
+    @include nhsuk-responsive-margin(5, 'bottom');
+    margin-top: 0;
+  }
 
   @include mq($until: desktop) {
 
@@ -236,5 +239,3 @@ $color_nhsuk-interruption-blue: #05538e;
   }
 
 }
-
-
