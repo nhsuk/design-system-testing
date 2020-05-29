@@ -59,12 +59,8 @@ p code {
 }
 
 .nhsuk-image {
-  @include nhsuk-responsive-margin(6, 'bottom');
+  @include nhsuk-responsive-margin(5, 'bottom');
   margin-top: 0;
-}
-
-.nhsuk-u-remove-underline {
-  text-decoration: none !important;
 }
 
 .nhsuk-u-color-white {

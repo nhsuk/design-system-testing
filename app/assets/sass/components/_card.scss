@@ -1,3 +1,36 @@
+ /* White link mixin needs updating in the frontend
+   ========================================================================== */
+
+   @mixin nhsuk-link-style-white {
+
+    color: $color_nhsuk-white;
+  
+    &:visited {
+      color: $color_nhsuk-white;
+    }
+  
+    &:hover {
+      color: $color_nhsuk-white;
+      text-decoration: none;
+    }
+  
+    &:focus {
+      color: $nhsuk-focus-text-color;
+      outline: $nhsuk-focus-width solid transparent;
+      outline-offset: $nhsuk-focus-width;
+      text-decoration: none;
+    }
+  
+    &:active {
+      color: $nhsuk-link-active-color;
+    }
+  
+  }
+  
+  .nhsuk-link--white {
+    @include nhsuk-link-style-white;
+  }
+  
 /* ==========================================================================
    COMPONENTS / #CARD
    ========================================================================== */
@@ -14,44 +47,8 @@
  *    box and an image.
  */
 
- /* White link mixin needs updating in the frontend
-   ========================================================================== */
-
- @mixin nhsuk-link-style-white {
-
-  color: $color_nhsuk-white;
-
-  &:visited {
-    color: $color_nhsuk-white;
-  }
-
-  &:hover {
-    color: $color_nhsuk-white;
-    text-decoration: none;
-  }
-
-  &:focus {
-    color: $nhsuk-focus-text-color;
-    outline: $nhsuk-focus-width solid transparent;
-    outline-offset: $nhsuk-focus-width;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: $nhsuk-link-active-color;
-  }
-
-}
-
-.nhsuk-link--white {
-  @include nhsuk-link-style-white;
-}
-
- /* Card
-   ========================================================================== */
-
-$card-shadow-width: 2px;
-$card-hover-shadow-width: 3px;
+$card-shadow-width: 1px;
+$card-hover-shadow-width: 2px;
 $color_nhsuk-interruption-blue: #05538e;
 
 .nhsuk-card {
