@@ -62,7 +62,7 @@ $nhsuk-border-width-callout: 8px;
 
 .nhsuk-callout--feature {
   @include nhsuk-responsive-margin(6, 'top');
-  @include nhsuk-responsive-padding(8, 'top');
+  @include nhsuk-responsive-padding(7, 'top');
 
   border: 0;
 
