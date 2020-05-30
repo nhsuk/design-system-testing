@@ -16,7 +16,7 @@ $nhsuk-border-width-alert: 8px;
   @include nhsuk-responsive-margin(5, 'bottom');
   @include nhsuk-responsive-padding(3);
 
-  border: nhsuk-spacing(1) solid $color_nhsuk-blue;
+  border-left: nhsuk-spacing(2) solid $color_nhsuk-blue;
   font-weight: 600;
   position: relative;
 
@@ -64,9 +64,16 @@ $nhsuk-border-width-alert: 8px;
 }
 
 .nhsuk-alert--warning {
+  background: tint($color_nhsuk-red, 80%);
+  border-color: $color_nhsuk-red;
+}
+
+.nhsuk-alert--warning {
+  background: tint($color_nhsuk-red, 80%);
   border-color: $color_nhsuk-red;
 }
 
 .nhsuk-alert--success {
+  background: tint($color_nhsuk-green, 80%);
   border-color: $color_nhsuk-green;
 }
