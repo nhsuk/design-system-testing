@@ -10,7 +10,7 @@
 
 $callout-border-width: 8px;
 $callout-urgent-border-width: 16px;
-$callout-box-shadow-width: 1px;
+$callout-border-bottom-width: 2px;
 
 .nhsuk-callout {
   @include top-and-bottom(); /* [1] */
@@ -34,20 +34,20 @@ $callout-box-shadow-width: 1px;
 
 .nhsuk-callout--warning {
   background: tint($color_nhsuk-yellow, 70%);
+  border-bottom: $callout-border-bottom-width solid shade($color_nhsuk-yellow, 5%);
   border-top: $callout-border-width solid $color_nhsuk-yellow;
-  box-shadow: 0 $callout-box-shadow-width 0 0 shade($color_nhsuk-yellow, 5%);
 }
 
 .nhsuk-callout--notice {
   background: $color_nhsuk-white;
+  border-bottom: $callout-border-bottom-width solid $color_nhsuk-blue;
   border-top: $callout-border-width solid $color_nhsuk-blue;
-  box-shadow: 0 $callout-box-shadow-width 0 0 $color_nhsuk-grey-4;
 }
 
 .nhsuk-callout--urgent {
   background: $color_nhsuk-white;
+  border-bottom: $callout-border-bottom-width solid $color_nhsuk-red;
   border-top: $callout-urgent-border-width solid $color_nhsuk-red;
-  box-shadow: 0 $callout-box-shadow-width 0 0 $color_nhsuk-grey-4;
 }
 
 .nhsuk-callout--immediate {
@@ -67,7 +67,7 @@ $callout-box-shadow-width: 1px;
   @include nhsuk-responsive-margin(6, 'top');
   @include nhsuk-responsive-padding(8, 'top');
 
-  border: 0;
+  border-top: 0;
 
   + .nhsuk-callout--feature {
     @include nhsuk-responsive-margin(6, 'top');
@@ -99,7 +99,7 @@ $callout-box-shadow-width: 1px;
 
 .nhsuk-callout--feature.nhsuk-callout--notice {
   background: $color_nhsuk-white;
-  box-shadow: 0 $callout-box-shadow-width 0 0 $color_nhsuk-grey-4;
+  border-bottom: 1px solid $color_nhsuk-grey-4;
 
   .nhsuk-callout__heading--feature {
     background: $color_nhsuk-blue;
