@@ -55,7 +55,6 @@ $nhsuk-border-width-callout: 8px;
 .nhsuk-callout__section-break {
   @include nhsuk-responsive-margin(4, 'bottom');
   @include nhsuk-responsive-margin(4, 'top');
-  border: 2px solid $color_nhsuk-blue;
 }
 
 /* Callout feature
@@ -63,7 +62,9 @@ $nhsuk-border-width-callout: 8px;
 
 .nhsuk-callout--feature {
   @include nhsuk-responsive-margin(6, 'top');
-  @include nhsuk-responsive-padding(7, 'top');
+  @include nhsuk-responsive-padding(8, 'top');
+
+  border: 0;
 
   + .nhsuk-callout--feature {
     @include nhsuk-responsive-margin(6, 'top');
@@ -95,7 +96,6 @@ $nhsuk-border-width-callout: 8px;
 
 .nhsuk-callout--feature.nhsuk-callout--notice {
   background: $color_nhsuk-white;
-  border: 0;
   box-shadow: 0 1px 0 0 $color_nhsuk-grey-4;
 
   .nhsuk-callout__heading--feature {
