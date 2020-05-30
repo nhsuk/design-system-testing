@@ -11,6 +11,7 @@
 $callout-border-width: 8px;
 $callout-urgent-border-width: 16px;
 $callout-border-bottom-width: 2px;
+$callout-feature-border-bottom-width: 1px;
 
 .nhsuk-callout {
   @include top-and-bottom(); /* [1] */
@@ -90,6 +91,7 @@ $callout-border-bottom-width: 2px;
 
 .nhsuk-callout--feature.nhsuk-callout--warning {
   background: tint($color_nhsuk-yellow, 70%);
+  border-bottom: $callout-feature-border-bottom-width solid shade($color_nhsuk-yellow, 5%);
 
   .nhsuk-callout__heading--feature {
     background: $color_nhsuk-yellow;
@@ -99,7 +101,7 @@ $callout-border-bottom-width: 2px;
 
 .nhsuk-callout--feature.nhsuk-callout--notice {
   background: $color_nhsuk-white;
-  border-bottom: 1px solid $color_nhsuk-grey-4;
+  border-bottom: $callout-feature-border-bottom-width solid $color_nhsuk-grey-4;
 
   .nhsuk-callout__heading--feature {
     background: $color_nhsuk-blue;
