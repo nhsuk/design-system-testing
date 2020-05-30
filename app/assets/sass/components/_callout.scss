@@ -14,7 +14,7 @@ $nhsuk-border-width-callout: 8px;
   @include top-and-bottom(); /* [1] */
   @include reading-width(); /* [2] */
   @include nhsuk-responsive-margin(6, 'bottom');
-  @include nhsuk-responsive-padding(4);
+  @include nhsuk-responsive-padding(5);
 
   position: relative;
 
@@ -62,7 +62,7 @@ $nhsuk-border-width-callout: 8px;
 
 .nhsuk-callout--feature {
   @include nhsuk-responsive-margin(6, 'top');
-  @include nhsuk-responsive-padding(7, 'top');
+  @include nhsuk-responsive-padding(8, 'top');
 
   border: 0;
 
@@ -76,12 +76,12 @@ $nhsuk-border-width-callout: 8px;
 
   display: inline-block;
   left: 0;
-  padding: nhsuk-spacing(2) nhsuk-spacing(3);
+  padding: nhsuk-spacing(2) nhsuk-spacing(4);
   position: absolute;
   top: - nhsuk-spacing(3);
 
   @include mq($from: desktop) {
-    padding: nhsuk-spacing(2) nhsuk-spacing(4);
+    padding: nhsuk-spacing(2) nhsuk-spacing(5);
   }
 }
 
