@@ -14,9 +14,8 @@ $nhsuk-border-width-alert: 8px;
   @include top-and-bottom(); /* [1] */
   @include reading-width(); /* [2] */
   @include nhsuk-responsive-margin(5, 'bottom');
-  @include nhsuk-responsive-padding(3);
+  @include nhsuk-responsive-padding(4);
 
-  border-left: nhsuk-spacing(2) solid $color_nhsuk-blue;
   font-weight: 600;
   position: relative;
 
@@ -30,13 +29,28 @@ $nhsuk-border-width-alert: 8px;
 
 }
 
-.nhsuk-icon__warning {
-  fill: $color_nhsuk-red;
+.nhsuk-alert__icon {
+  height: 28px;
+  left: 6px;
+  position: absolute;
+  top: 14px;
+  width: 28px;
+
+  @include mq($from: tablet) {
+    height: 34px;
+    left: 12px;
+    top: 20px;
+    width: 34px;
+  }
+}
+
+.nhsuk-icon__info {
+  fill: $color_nhsuk-blue;
   padding: 4px;
 }
 
-.nhsuk-icon__information {
-  fill: $color_nhsuk-blue;
+.nhsuk-icon__warning {
+  fill: $color_nhsuk-red;
   padding: 4px;
 }
 
@@ -48,32 +62,17 @@ $nhsuk-border-width-alert: 8px;
   }
 }
 
-.nhsuk-alert__icon {
-  height: 28px;
-  left: 6px;
-  position: absolute;
-  top: 6px;
-  width: 28px;
-
-  @include mq($from: tablet) {
-    height: 34px;
-    left: 12px;
-    top: 12px;
-    width: 34px;
-  }
+.nhsuk-alert--info {
+  background: tint($color_nhsuk-blue, 80%);
+  border-left: $nhsuk-border-width-alert solid $color_nhsuk-blue;
 }
 
 .nhsuk-alert--warning {
   background: tint($color_nhsuk-red, 80%);
-  border-color: $color_nhsuk-red;
-}
-
-.nhsuk-alert--warning {
-  background: tint($color_nhsuk-red, 80%);
-  border-color: $color_nhsuk-red;
+  border-left: $nhsuk-border-width-alert solid $color_nhsuk-red;
 }
 
 .nhsuk-alert--success {
   background: tint($color_nhsuk-green, 80%);
-  border-color: $color_nhsuk-green;
+  border-left: $nhsuk-border-width-alert solid $color_nhsuk-green;
 }
