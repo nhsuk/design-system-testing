@@ -27,10 +27,9 @@ $callout-box-shadow-width: 1px;
 }
 
 .nhsuk-callout--highlight {
-  @include nhsuk-responsive-padding(3);
-
   border: 0;
   border-left: $callout-border-width solid $color_nhsuk-blue;
+  padding: nhsuk-spacing(3);
 }
 
 .nhsuk-callout--warning {
