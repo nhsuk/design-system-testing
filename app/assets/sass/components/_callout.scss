@@ -4,8 +4,7 @@
 /**
  * 1. Removes top margin from first element and bottom margin from last,
  *    to ensure correct spacing within the component.
- * 2. Restricts the width of the text to optimise the line length for
- *    readability.
+ * 2. To position the feature heading.
  */
 
 $callout-border-width: 8px;
@@ -15,11 +14,16 @@ $callout-feature-border-bottom-width: 1px;
 
 .nhsuk-callout {
   @include top-and-bottom(); /* [1] */
-  @include reading-width(); /* [2] */
-  @include nhsuk-responsive-margin(6, 'bottom');
   @include nhsuk-responsive-padding(5);
 
-  position: relative;
+  margin-bottom: nhsuk-spacing(5);
+  margin-top: nhsuk-spacing(5);
+  position: relative; /* [2] */
+
+  @include mq($from: desktop) {
+    margin-bottom: nhsuk-spacing(7);
+    margin-top: nhsuk-spacing(7);
+  }
 
   @include mq($media-type: print) {
     border-color: $nhsuk-print-text-color;
@@ -28,7 +32,6 @@ $callout-feature-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--highlight {
-  border: 0;
   border-left: $callout-border-width solid $color_nhsuk-blue;
   padding: nhsuk-spacing(3);
 }
@@ -56,23 +59,13 @@ $callout-feature-border-bottom-width: 1px;
   border: $callout-urgent-border-width solid $color_nhsuk-red;
 }
 
-.nhsuk-callout__section-break {
-  @include nhsuk-responsive-margin(4, 'bottom');
-  @include nhsuk-responsive-margin(4, 'top');
-}
-
 /* Callout feature
    ========================================================================== */
 
 .nhsuk-callout--feature {
-  @include nhsuk-responsive-margin(6, 'top');
   @include nhsuk-responsive-padding(8, 'top');
 
   border-top: 0;
-
-  + .nhsuk-callout--feature {
-    @include nhsuk-responsive-margin(6, 'top');
-  }
 }
 
 .nhsuk-callout__heading--feature {
@@ -90,8 +83,7 @@ $callout-feature-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--feature.nhsuk-callout--warning {
-  background: tint($color_nhsuk-yellow, 70%);
-  border-bottom: $callout-feature-border-bottom-width solid shade($color_nhsuk-yellow, 5%);
+  border-bottom-width: $callout-feature-border-bottom-width;
 
   .nhsuk-callout__heading--feature {
     background: $color_nhsuk-yellow;
@@ -100,7 +92,6 @@ $callout-feature-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--feature.nhsuk-callout--notice {
-  background: $color_nhsuk-white;
   border-bottom: $callout-feature-border-bottom-width solid $color_nhsuk-grey-4;
 
   .nhsuk-callout__heading--feature {
