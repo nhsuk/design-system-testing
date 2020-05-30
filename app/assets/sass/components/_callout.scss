@@ -71,7 +71,6 @@ $nhsuk-border-width-callout: 8px;
   @include nhsuk-font($size: 24, $weight: bold);
 
   display: inline-block;
-  left: -2px;
   position: absolute;
   top: - nhsuk-spacing(3);
 }
@@ -82,10 +81,11 @@ $nhsuk-border-width-callout: 8px;
   .nhsuk-callout__heading--feature {
     background: $color_nhsuk-yellow;
     color: $color_nhsuk-black;
+    left: -2px;
     padding: nhsuk-spacing(2) 22px;
 
     @include mq($from: desktop) {
-      padding: nhsuk-spacing(2) 30px;
+      padding: nhsuk-spacing(2) 28px;
     }
   }
 }
@@ -98,10 +98,11 @@ $nhsuk-border-width-callout: 8px;
   .nhsuk-callout__heading--feature {
     background: $color_nhsuk-blue;
     color: $color_nhsuk-white;
-    padding: nhsuk-spacing(2) 22px;
+    left: 0;
+    padding: nhsuk-spacing(2) nhsuk-spacing(3);
 
     @include mq($from: desktop) {
-      padding: nhsuk-spacing(2) 30px;
+      padding: nhsuk-spacing(2) nhsuk-spacing(4);
     }
   }
 }
