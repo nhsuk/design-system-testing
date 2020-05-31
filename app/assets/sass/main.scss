@@ -59,8 +59,17 @@ p code {
 }
 
 .nhsuk-image {
-  @include nhsuk-responsive-margin(5, 'bottom');
+  @include nhsuk-responsive-margin(4, 'bottom');
   margin-top: 0;
+}
+
+.nhsuk-image + h2 {
+  @include nhsuk-responsive-padding(4, 'top');
+}
+
+.nhsuk-image + h2,
+.nhsuk-image + h3 {
+  @include nhsuk-responsive-padding(3, 'top');
 }
 
 .nhsuk-u-color-white {
