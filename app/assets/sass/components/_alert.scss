@@ -6,12 +6,14 @@
  *    to ensure correct spacing within the component.
  */
 
-$nhsuk-border-width-alert: 8px;
+$nhsuk-border-width-alert: 4px;
 
 .nhsuk-alert {
   @include top-and-bottom(); /* [1] */
   @include nhsuk-responsive-margin(5, 'bottom');
   @include nhsuk-responsive-padding(4);
+
+  border: $nhsuk-border-width-alert solid $color_nhsuk-blue;
 
   font-weight: 600;
   position: relative;
@@ -29,29 +31,12 @@ $nhsuk-border-width-alert: 8px;
 /* Colour variations
    ========================================================================== */
 
-.nhsuk-alert--info {
-  background: tint($color_nhsuk-blue, 80%);
-  border-left: $nhsuk-border-width-alert solid $color_nhsuk-blue;
-}
-
 .nhsuk-alert--warning {
-  background: tint($color_nhsuk-red, 80%);
-  border-left: $nhsuk-border-width-alert solid $color_nhsuk-red;
+  border-color: $color_nhsuk-red;
 }
 
 .nhsuk-alert--success {
-  background: tint($color_nhsuk-green, 80%);
-  border-left: $nhsuk-border-width-alert solid $color_nhsuk-green;
-}
-
-.nhsuk-alert--warm-yellow {
-  background: tint($color_nhsuk-warm-yellow, 60%);
-  border-left: $nhsuk-border-width-alert solid $color_nhsuk-warm-yellow;
-}
-
-.nhsuk-alert--yellow {
-  background: tint($color_nhsuk-yellow, 60%);
-  border-left: $nhsuk-border-width-alert solid $color_nhsuk-yellow;
+  border-color: $color_nhsuk-green;
 }
 
 /* Alert ssicon
