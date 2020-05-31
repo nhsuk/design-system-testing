@@ -37,20 +37,20 @@ $callout-feature-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--warning {
-  background: tint($color_nhsuk-yellow, 70%);
+  background: tint($color_nhsuk-yellow, 60%);
   border-bottom: $callout-border-bottom-width solid shade($color_nhsuk-yellow, 5%);
   border-top: $callout-border-width solid $color_nhsuk-yellow;
 }
 
 .nhsuk-callout--notice {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-bottom-width solid $color_nhsuk-blue;
+  border-bottom: $callout-border-bottom-width solid $color_nhsuk-grey-4;
   border-top: $callout-border-width solid $color_nhsuk-blue;
 }
 
 .nhsuk-callout--urgent {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-bottom-width solid $color_nhsuk-red;
+  border-bottom: $callout-border-bottom-width solid $color_nhsuk-grey-4;
   border-top: $callout-urgent-border-width solid $color_nhsuk-red;
 }
 
