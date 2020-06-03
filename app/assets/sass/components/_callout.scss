@@ -54,7 +54,7 @@ $callout-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--immediate {
-  background: $color_nhsuk-white;
+  background: tint($color_nhsuk-red, 92%);
   border: $callout-urgent-border-width solid $color_nhsuk-red;
 }
 
