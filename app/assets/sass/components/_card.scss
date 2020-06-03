@@ -64,7 +64,7 @@ $color_nhsuk-interruption-blue: #05538e;
 .nhsuk-card__img {
   @include print-hide();
 
-  border-bottom: 1px solid $color_nhsuk-grey-5; /* [2] */
+  border-bottom: $card-shadow-width solid $color_nhsuk-grey-5; /* [2] */
   display: block;
   width: 100%;
 }
