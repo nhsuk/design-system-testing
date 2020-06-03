@@ -42,8 +42,7 @@
       <h3>Typography > List</h3>
       <p>The <code>nhsuk-list--border</code> style would need adding to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
 
-      <div class="app-example">
-        <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      <div class="app-example app-example--tag">
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="#">List item as a link</a></li>
           <li><a href="#">List item as a link</a></li>
@@ -51,8 +50,7 @@
         </ul>
       </div>
 
-      <div class="app-example">
-        <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      <div class="app-example app-example--tag">
         <ul class="nhsuk-list nhsuk-list--border">
           <li><a href="#">List item as a link</a>
             <p class="nhsuk-body-s nhsuk-u-margin-top-1 nhsuk-u-secondary-text-color">Wednesday  18 March  2020</p>
@@ -70,8 +68,7 @@
       <p>The existing panel component can be used.</p>
       <h3>Panel with label</h3>
 
-      <div class="app-example">
-        <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      <div class="app-example app-example--tag">
         {{ panel({
           "label": "Panel header",
           "HTML": "<p>Panel content</p>"
@@ -81,8 +78,7 @@
       <h2>Pattern</h2>
       <p>The <a href="https://service-manual.nhs.uk/design-system/patterns/a-to-z-page">A to Z page</a> pattern already exisits in the design system.</p>
 
-      <div class="app-example">
-        <strong class="nhsuk-tag nhsuk-tag--dark-grey app-example__heading">Example</strong>
+      <div class="app-example app-example--tag">
         {{ panel({
           "label": "A",
           "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
@@ -102,7 +98,8 @@
 
       {{ backLink({
         "href": "/",
-        "text": "Go back"
+        "text": "Go back",
+        "classes": "nhsuk-u-margin-top-7"
       }) }}
         
     </div>  

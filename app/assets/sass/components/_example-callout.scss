@@ -9,7 +9,7 @@
     @include nhsuk-responsive-padding(5, 'bottom');
     @include nhsuk-responsive-padding(5, 'left');
     @include nhsuk-responsive-padding(5, 'right');
-    @include nhsuk-responsive-padding(7, 'top');
+    @include nhsuk-responsive-padding(5, 'top');
   
     border: 1px solid $color_nhsuk-grey-3;
     position: relative;
@@ -35,6 +35,26 @@
   
   .app-example--white {
     background: $color_nhsuk-white;
+  }
+
+  .app-example--tag {
+    @include nhsuk-responsive-padding(8, 'top');
+
+    &:before {
+      @include nhsuk-font($size: 16, $weight: bold, $line-height: 1);
+      
+      background: $color_nhsuk-grey-4; 
+      border: 1px solid $color_nhsuk-grey-3;
+      content: "Example";
+      display: inline-block;
+      left: -1px;
+      padding-bottom: nhsuk-spacing(1);
+      padding-left: nhsuk-spacing(2);
+      padding-right: nhsuk-spacing(2);
+      padding-top: nhsuk-spacing(1);
+      position: absolute;
+      top: -1px;
+    }
   }
   
   // Image example
