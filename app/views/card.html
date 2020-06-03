@@ -23,6 +23,10 @@
 
       <p class="nhsuk-lede-text">Demonstration of a card component that can be configured a number of ways using modifiers.</p>
 
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/image.html" %}
+      </div>
+
       <h2>Background</h2>
       <p>The <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/159">panel</a> and <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/91">promo</a> are two components in the <a href="https://github.com/nhsuk/nhsuk-frontend">NHS.UK frontend</a> that do not have guidance in the service manual. They both also share a lot of the same structure and design. This has confused users of the design system, with people not knowing when and how to use the components.</p>
       <p>Also, the content of the promo component is all contained within an anchor tag and this can be a <a href="https://designsystem.gov.au/components/card/rationale/#cards-as-links">difficult experience for screenreader users</a>.</p>
@@ -46,9 +50,9 @@
         {% include "includes/card-variants/clickable.html" %}
       </div>
 
-      <h3>Clickable card with image</h3>
+      <h3>With image</h3>
       <div class="app-example app-example--tag">
-        {% include "includes/card-variants/clickable-with-image.html" %}
+        {% include "includes/card-variants/image.html" %}
       </div>
 
       <h3>With footer link</h3>
@@ -58,17 +62,17 @@
 
       <h3>With multiple links</h3>
       <div class="app-example app-example--tag">
-        {% include "includes/card-variants/basic-with-multiple-links.html" %}
+        {% include "includes/card-variants/multiple-links.html" %}
       </div>
 
       <h3>With metadata</h3>
       <div class="app-example app-example--tag">
-        {% include "includes/card-variants/clickable-with-metadata.html" %}
+        {% include "includes/card-variants/metadata.html" %}
       </div>
 
-      <h3>With a heading caption</h3>
+      <h3>With heading caption</h3>
       <div class="app-example app-example--tag">
-        {% include "includes/card-variants/clickable-with-heading-caption.html" %}
+        {% include "includes/card-variants/heading-caption.html" %}
       </div>
 
       <h3>With action link</h3>
@@ -76,9 +80,16 @@
         {% include "includes/card-variants/action-link.html" %}
       </div>
 
-      <h3>Video card</h3>
+      <h3>With video</h3>
       <div class="app-example app-example--tag">
         {% include "includes/card-variants/video.html" %}
+      </div>
+
+      <h3>With grey background</h3>
+      <p>For cards on a white bckground.</p>
+      
+      <div class="app-example app-example--tag app-example--white">
+        {% include "includes/card-variants/grey.html" %}
       </div>
 
     </div>
@@ -88,17 +99,17 @@
 
       <h3>Card group</h3>
       
-      <p><code>nhsuk-grid-column-one-half</code></p>
+      <p>Using <code>nhsuk-grid-column-one-half</code>:</p>
       <div class="app-example app-example--tag">
         {% include "includes/card-variants/card-group-half.html" %}
       </div>
       
-      <p><code>nhsuk-grid-column-one-third</code></p>
+      <p>Using <code>nhsuk-grid-column-one-third</code>:</p>
       <div class="app-example app-example--tag">
         {% include "includes/card-variants/card-group-third.html" %}
       </div>
       
-      <p><code>nhsuk-grid-column-one-quarter</code></p>
+      <p>Using <code>nhsuk-grid-column-one-quarter</code>:</p>
       <div class="app-example app-example--tag">
         {% include "includes/card-variants/card-group-quarter.html" %}
       </div>
@@ -107,13 +118,6 @@
   </div>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-
-      <h3>Grey card</h3>
-      <p>An alternative for cards used on a white bckground.</p>
-      
-      <div class="app-example app-example--tag app-example--white">
-        {% include "includes/card-variants/grey.html" %}
-      </div>
 
       <h3>Feature card</h3>
 
@@ -153,7 +157,7 @@
       </div>
 
       <p>You can change the size of the heading using <a href="https://service-manual.nhs.uk/design-system/styles/typography#headings">heading typography styles</a>.</p>
-      <p>Here's an example of using a <code>h2</code> with a <code>nhsuk-heading-l</code> class to reduce the heading size.</p>
+      <p>Here's an example of using a <code>h2</code> with a <code>nhsuk-heading-l</code> class to reduce the heading size:</p>
 
       <div class="app-example app-example--tag">
         {% include "includes/card-variants/accessibility-heading-class.html" %}
