@@ -42,20 +42,16 @@ $callout-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--notice {
-  background: $color_nhsuk-white;
-  border-bottom: $callout-border-bottom-width solid $color_nhsuk-grey-4;
-  border-top: $callout-border-width solid $color_nhsuk-blue;
+  border: $callout-border-width solid $color_nhsuk-blue;
 }
 
 .nhsuk-callout--urgent {
-  background: $color_nhsuk-white;
-  border-bottom: $callout-border-bottom-width solid $color_nhsuk-grey-4;
-  border-top: $callout-urgent-border-width solid $color_nhsuk-red;
+  border: $callout-border-width solid $color_nhsuk-red;
 }
 
 .nhsuk-callout--immediate {
-  background: $color_nhsuk-white;
-  border: $callout-urgent-border-width solid $color_nhsuk-red;
+  background: tint($color_nhsuk-red, 92%);
+  border: $callout-border-width solid $color_nhsuk-red;
 }
 
 /* Callout feature
@@ -63,8 +59,8 @@ $callout-border-bottom-width: 1px;
 
 .nhsuk-callout--feature {
   @include nhsuk-responsive-padding(8, 'top');
-
-  border-top: 0;
+  
+  border: 0;
 }
 
 .nhsuk-callout__heading--feature {
@@ -91,6 +87,7 @@ $callout-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--feature.nhsuk-callout--notice {
+  background: $color_nhsuk-white;
   border-bottom: $callout-border-bottom-width solid $color_nhsuk-grey-4;
 
   .nhsuk-callout__heading--feature {
@@ -98,6 +95,9 @@ $callout-border-bottom-width: 1px;
     color: $color_nhsuk-white;
   }
 }
+
+/* Callout block
+   ========================================================================== */
 
 .nhsuk-callout--block {
   border-top: 0;
@@ -150,14 +150,22 @@ $callout-border-bottom-width: 1px;
 
 }
 
-.nhsuk-callout--notice {
+.nhsuk-callout--notice.nhsuk-callout--block {
+  background: $color_nhsuk-white;
+  border: 0;
+  border-bottom: $callout-border-bottom-width solid $color_nhsuk-grey-4;
+
   .nhsuk-callout__heading--block {
     background: $color_nhsuk-blue;
     color: $color_nhsuk-white;
   }
 }
 
-.nhsuk-callout--urgent {
+.nhsuk-callout--urgent.nhsuk-callout--block {
+  background: $color_nhsuk-white;
+  border: 0;
+  border-bottom: $callout-border-bottom-width solid $color_nhsuk-grey-4;
+
   .nhsuk-callout__heading--block {
     background: $color_nhsuk-red;
     color: $color_nhsuk-white;
