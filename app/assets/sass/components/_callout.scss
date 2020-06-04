@@ -99,3 +99,113 @@ $callout-border-bottom-width: 1px;
   }
 }
 
+.nhsuk-callout--block {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.nhsuk-callout__heading--block {
+  @include nhsuk-responsive-padding(4, 'bottom');
+  @include nhsuk-responsive-padding(5, 'left');
+  @include nhsuk-responsive-padding(5, 'right');
+  @include nhsuk-responsive-padding(4, 'top');
+
+  border-top: 0;
+  margin-bottom: nhsuk-spacing(5);
+  margin-left: - nhsuk-spacing(4);
+  margin-right: - nhsuk-spacing(4);
+  margin-top: - nhsuk-spacing(4);
+  position: relative;
+
+  @include mq($from: desktop) {
+    margin-left: - nhsuk-spacing(5);
+    margin-right: - nhsuk-spacing(5);
+    margin-top: - nhsuk-spacing(5);
+  }
+}
+
+.nhsuk-callout__arrow {
+  bottom: -10px; /* [3] */
+  display: block;
+  height: 20px; /* [3] */
+  left: 30px; /* [4] */
+  overflow: hidden;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 20px; /* [3] */
+
+  @include print-hide();
+
+  &:before,
+  &:after {
+    border: solid 32px $color_nhsuk-blue; /* [3] */
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg); /* [6] */
+    width: 0;
+  }
+
+}
+
+.nhsuk-callout--notice {
+  .nhsuk-callout__heading--block {
+    background: $color_nhsuk-blue;
+    color: $color_nhsuk-white;
+  }
+}
+
+.nhsuk-callout--urgent {
+  .nhsuk-callout__heading--block {
+    background: $color_nhsuk-red;
+    color: $color_nhsuk-white;
+
+    .nhsuk-callout__arrow {   
+      &:before,
+      &:after {
+        border-color: $color_nhsuk-red; /* [3] */
+      }
+    
+    }
+  }
+}
+
+.nhsuk-callout--immediate.nhsuk-callout--block {
+  background: $color_nhsuk-black;
+  border: 0;
+  color: $color_nhsuk-white;
+
+  .nhsuk-callout__heading--block {
+    background: $color_nhsuk-red;
+    color: $color_nhsuk-white;
+
+    .nhsuk-callout__arrow {   
+      &:before,
+      &:after {
+        border-color: $color_nhsuk-red; /* [3] */
+      }
+    
+    }
+  }
+
+  a {
+    @include nhsuk-link-style-white;
+  }
+
+  .nhsuk-details,
+  .nhsuk-details__summary {
+    color: $color_nhsuk-white;
+  }
+
+  .nhsuk-details__summary {
+    &:hover {
+      color: $color_nhsuk-white;
+    }
+    &:focus {
+      color: $color_nhsuk-black;
+    }
+  }
+}
+
