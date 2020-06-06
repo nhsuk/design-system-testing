@@ -7,7 +7,7 @@
    $color_nhsuk-orange: #ED8B00;
    
    .nhsuk-tag {
-     @include nhsuk-font($size: 19, $weight: bold, $line-height: 1);
+     @include nhsuk-font($size: 16, $weight: bold, $line-height: 1);
      background-color: shade($color_nhsuk-blue, 10%);
      border: 1px solid shade($color_nhsuk-blue, 10%); 
      color: $color_nhsuk-white;

@@ -31,16 +31,15 @@
 
       <!-- Change the page title here -->
       <h1>
-        <span class="nhsuk-caption-l">Refactoring components</span>
+        <span class="nhsuk-caption-l">Component</span>
         Do and don't list
       </h1>
 
       <h2>Overview</h2>
-      <p>The <a href="https://service-manual.nhs.uk/design-system/components/do-and-dont-lists">do and don't list</a> component could be refactored using the ticks and crosses list style and panel component, and all the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">do and don't list code</a> could be removed.</p> 
-      <p>The current component guidance could be rewritten into a design pattern.</p>
+      <p>Proposing to rewrite the <a href="https://service-manual.nhs.uk/design-system/components/do-and-dont-lists">do and don't list</a> component as a design pattern, remove the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">do and don't list code</a> and build the pattern using existing styles and components.</p>
 
       <h2>Styles</h2>
-      <p>The ticks and crosses list style would need adding to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
+      <p>The ticks and crosses list style would be decoupled from the component and added to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
       <h3>Ticks</h3>
       <div class="app-example app-example--tag">
         <ul class="nhsuk-list nhsuk-list--tick">
@@ -119,116 +118,44 @@
         
 
         <h2>Components</h2>
-        <p>The existing panel component can be used.</p>
-        <h3>Panel with label</h3>
-        <div class="app-example app-example--tag">
-          {{ panel({
-            "label": "Do",
-            "HTML": "<p>Panel content</p>",
-            "classes": "nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5"
-          }) }}
-        </div>
+        <p>The new pattern would use the <a href="/card">card</a> component.</p>
 
-        <h3>Panel</h3>
+        <h3>Feature card</h3>
         <div class="app-example app-example--tag">
-          {{ panel({
-            "HTML": "<h3>Panel heading</h3>
-            <p>Panel content</p>",
-            "classes": "nhsuk-u-margin-top-0"
-          }) }}
+          {% include "includes/card-variants/feature.html" %}
         </div>
-
+        
         <h2>Patterns</h2>
-        <p>Rewrite the do and don't list as a design pattern: "Help users understand more easily what they should and shouldn't do".</p>
-
+        <p>The component guidance would be rewritten as design pattern: <strong>"Help users understand more easily what they should and shouldn't do"</strong>.</p>
+        <p>Also, the same styles and components could be utilised for other design patterns — for example the <strong>"Help users understand what they can and can't do"</strong> pattern used on the NHS App.</p>
+        
         <div class="app-example app-example--tag">
-          {{ panel({
-            "label": "Do",
-            "HTML": "<ul class='nhsuk-list nhsuk-list--tick'>
-            <li>
-              <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
-                <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
-              </svg>
-              cover blisters that are likely to burst with a soft plaster or dressing
-            </li>
-            <li>
-              <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
-                <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
-              </svg>
-              wash your hands before touching a burst blister
-            </li>
-            <li>
-              <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
-                <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
-              </svg>
-              allow the fluid in a burst blister to drain before covering it with a plaster or dressing
-            </li>
-          </ul>"
-          }) }}
-
-          {{ panel({
-            "label": "Don't",
-            "HTML": "<ul class='nhsuk-list nhsuk-list--cross'>
-            <li>
-              <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
-                <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
-                <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
-              </svg>
-              do not burst a blister yourself
-            </li>
-            <li>
-              <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
-                <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
-                <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
-              </svg>
-              do not peel the skin off a burst blister
-            </li>
-            <li>
-              <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
-                <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
-                <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
-              </svg>
-              do not pick at the edges of the remaining skin
-            </li>
-            <li>
-              <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
-                <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
-                <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
-              </svg>
-              do not wear the shoes or use the equipment that caused your blister until it heals
-            </li>
-          </ul>"
-          }) }}
-        </div>
-
-        <p>Other design patterns could also utilise the same styles and components.</p>
-        <p>For example: the "Help users understand what they can and can't do" pattern used on the NHS App.</p>
-        <div class="app-example app-example--tag">
-        {{ panel({
-          "HTML": "<h3>Services you can access for Kevin</h3>
-          <ul class='nhsuk-list nhsuk-list--cross'>
-          <li>
-            <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
-              <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
-            </svg>
-            Book an appointment
-          </li>
-          <li>
-            <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
-              <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
-            </svg>
-            Order a repeat prescription
-          </li>
-          <li>
-            <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
-              <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
-              <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
-            </svg>
-            View their medical record
-          </li>
-        </ul>",
-        "classes": "nhsuk-u-margin-top-0"
-        }) }}
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content" nhsuk-card__content--feature"">
+              <h3 class="nhsuk-card__heading">Services you can access for Kevin</h3>
+              <ul class='nhsuk-list nhsuk-list--cross'>
+                <li>
+                  <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+                    <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
+                  </svg>
+                  Book an appointment
+                </li>
+                <li>
+                  <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+                    <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
+                  </svg>
+                  Order a repeat prescription
+                </li>
+                <li>
+                  <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
+                    <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
+                    <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
+                  </svg>
+                  View their medical record
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
       {{ backLink({
