@@ -1,46 +1,32 @@
-<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
-  In /views/layout.html you can:
-    - change the header and footer 
-    - add custom CSS and JavaScript
--->
 
-<!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
   Review date - Design system testing
 {% endblock %}
 
-<!-- Breadcrumb goes inside the beforeContent block -->
-<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-  <!-- Breadcrumb -->
   {{ breadcrumb({
     href: "/",
     text: "Home"
   }) }}
 {% endblock %}
 
-<!-- Your page content goes inside the content block -->
-<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
   <div class="nhsuk-grid-row">
 
     <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- Change the page title here -->
       <h1>
         <span class="nhsuk-caption-l">Component</span>
         Review date 
       </h1>
 
       <h2>Overview</h2>
-      <p>The <a href="https://service-manual.nhs.uk/design-system/components/review-date">review date</a> component could be refactored using existing styles and all the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/review-date">review date code</a> could be removed.</p>
-      <p>The current guidance could be rewritten into a design patten.</p>
+      <p>Proposing to rewrite the <a href="https://service-manual.nhs.uk/design-system/components/review-date">review date</a> component as a design pattern, remove the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/review-date">review date code</a> and build the pattern using existing styles and components.</p>
 
       <h2>Styles</h2>
-      <p>The review date can be built using these styles:</p>
+      <p>The review date could be built using these styles:</p>
       <ul>
         <li><code>nhsuk-body-s</code></li>
         <li><code>nhsuk-u-secondary-text-color</code></li>
@@ -64,7 +50,7 @@
       <p>Doesn't need a component.</p>
 
       <h2>Pattern</h2>
-      <p>The <a href="https://service-manual.nhs.uk/design-system/styles/spacing">review date component</a> can be rewritten as a design pattern: "Reassure users that your information is up-to-date".</p>
+      <p>The component guidance would be rewritten as design pattern: <strong>"Reassure users that your information is up-to-date"</strong>.</p>
 
       {{ backLink({
         "href": "/",

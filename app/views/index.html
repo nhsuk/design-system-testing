@@ -1,59 +1,17 @@
-<!-- Use this page as the index for your project -->
-
-<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-
-<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
-  In /views/layout.html you can:
-    - change the header and footer 
-    - add custom CSS and JavaScript
--->
 
-<!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
   Design system testing
 {% endblock %}
 
-<!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
 {% endblock %}
 
-<!-- Your page content goes inside the content block -->
-<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- Change the page title here -->
       <h1>Design system testing</h1>
-
-      <!--<h2>Styles</h2>
-
-      <div class="nhsuk-table-responsive">
-        <table class="nhsuk-table">
-          <caption class="nhsuk-table__caption">List of design styles being tested</caption>
-          <thead class="nhsuk-table__head">
-            <tr class="nhsuk-table__row">
-              <th class="nhsuk-table__header" style="width: 180px" scope="col">Name</th>
-              <th class="nhsuk-table__header" scope="col">Type of work</th>
-              <th class="nhsuk-table__header" style="width: 160px" scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody class="nhsuk-table__body">
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell"><a href="#">Bordered list</a></td>
-              <td class="nhsuk-table__cell">New style</td>
-              <td class="nhsuk-table__cell"><span class="nhsuk-tag nhsuk-tag--blue">Ready to review</spam></td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell"><a href="#">Tick and cross list</a></td>
-              <td class="nhsuk-table__cell">New style</td>
-              <td class="nhsuk-table__cell"><span class="nhsuk-tag nhsuk-tag--blue">Ready to review</spam></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>-->
 
       <h2>Components</h2>
 
@@ -80,7 +38,7 @@
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell"><a href="/expander">Expander</a></td>
-              <td class="nhsuk-table__cell">Update style</td>
+              <td class="nhsuk-table__cell">Update component style</td>
               <td class="nhsuk-table__cell"><span class="nhsuk-tag nhsuk-tag--blue">Ready to review</spam></td>
             </tr>
             <tr class="nhsuk-table__row">
@@ -91,13 +49,11 @@
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell"><a href="/tag">Tag</a></td>
               <td class="nhsuk-table__cell">New component</td>
-              <td class="nhsuk-table__cell"><span class="nhsuk-tag nhsuk-tag--purple">Research + design</spam></td>
+              <td class="nhsuk-table__cell"><span class="nhsuk-tag nhsuk-tag--blue">Ready to review</spam></td>
             </tr>
           </tbody>
         </table>
       </div>
-
-      <!-- End of content -->
 
     </div>
   </div>
