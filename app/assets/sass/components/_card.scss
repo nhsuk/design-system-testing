@@ -21,7 +21,6 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 .nhsuk-card__img {
   @include print-hide();
 
-  border-bottom: $card-border-width solid $color_nhsuk-grey-5;
   display: block;
   width: 100%;
 }
@@ -78,11 +77,50 @@ $card-border-hover-color: $color_nhsuk-grey-3;
   }
 }
 
-/* Grey variant
+/* Colour variations
    ========================================================================== */
 
 .nhsuk-card--grey {
   background: $color_nhsuk-grey-5;
+}
+
+.nhsuk-card--green {
+  background: shade($color_nhsuk-green, 10%);
+  border-color: shade($color_nhsuk-green, 40%);
+
+  &.nhsuk-card--clickable {
+    &:hover{ 
+      background: shade($color_nhsuk-green, 30%);
+      border-color: shade($color_nhsuk-green, 60%);
+    }
+  }
+}
+
+.nhsuk-card--blue {
+  background: shade($color_nhsuk-blue, 20%);
+  border-color: shade($color_nhsuk-blue, 50%);
+
+  &.nhsuk-card--clickable {
+    &:hover{ 
+      background: shade($color_nhsuk-blue, 30%);
+      border-color: shade($color_nhsuk-blue, 60%);
+    }
+  }
+}
+
+.nhsuk-card--green,
+.nhsuk-card--blue {
+  color: $color_nhsuk-white;
+  margin-top: 0;
+
+  .nhsuk-card__caption {
+    color: $color_nhsuk-white;
+  }
+
+  &.nhsuk-card--clickable a,
+    a {
+      @include nhsuk-link-style-white;
+  }
 }
 
 /* Card video
@@ -136,33 +174,6 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
 .nhsuk-card__content--feature {
   @include nhsuk-responsive-padding(8, 'top');
-}
-
-/* Confirmation and Interruption card
-   ========================================================================== */
-
-.nhsuk-card--confirmation {
-  background: shade($color_nhsuk-green, 10%);
-  border-color: shade($color_nhsuk-green, 40%);
-}
-
-.nhsuk-card--interruption {
-  background: shade($color_nhsuk-blue, 20%);
-  border-color: shade($color_nhsuk-blue, 50%);
-}
-
-.nhsuk-card--confirmation,
-.nhsuk-card--interruption {
-  color: $color_nhsuk-white;
-  margin-top: 0;
-
-  .nhsuk-card__caption {
-    color: $color_nhsuk-white;
-  }
-
-  a {
-    @include nhsuk-link-style-white;
-  }
 }
 
 /* Card group
