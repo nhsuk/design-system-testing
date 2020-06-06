@@ -120,3 +120,39 @@ p code {
     color: $nhsuk-link-color;
   }
 }
+
+.nhsuk-expander {
+  background: $color_nhsuk-white;
+  box-shadow: 0 0 0 $card-shadow-width $card-shadow-color, 0 $card-shadow-width-bottom 0 $card-shadow-color;
+
+  &:hover {
+    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-color;
+  }
+
+  .nhsuk-details__summary {
+    background: transparent;
+    border-top: 0;
+    padding: 16px 24px;
+
+    @include mq($from: desktop) {
+      padding: 24px 32px;
+    }
+  }
+
+  .nhsuk-details__summary[aria-expanded="true"] {
+    border-bottom: 1px solid $card-shadow-color;
+  }
+
+  .nhsuk-details__text {
+    @include nhsuk-responsive-padding(5);
+  }
+}
+
+.nhsuk-expander-group > .nhsuk-details {
+  margin-bottom: nhsuk-spacing(1);
+}
+
+.nhsuk-details__text p {
+  @include nhsuk-responsive-margin(4, 'bottom');
+}
+

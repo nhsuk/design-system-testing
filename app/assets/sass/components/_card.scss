@@ -15,14 +15,16 @@
  */
 
 $card-shadow-width: 1px;
+$card-shadow-width-bottom: 2px;
 $card-hover-shadow-width: 4px;
+$card-shadow-color: $color_nhsuk-grey-4;
 $color_nhsuk-interruption-blue: #05538e;
 
 .nhsuk-card {
   @include nhsuk-responsive-margin(6, 'bottom');
 
   background: $color_nhsuk-white;
-  box-shadow: 0 $card-shadow-width 0 0 $color_nhsuk-grey-4;
+  box-shadow: 0 0 0 $card-shadow-width $card-shadow-color, 0 $card-shadow-width-bottom 0 $card-shadow-color;
   outline: $card-shadow-width solid transparent; /* [1] */
   position: relative;
   width: 100%;
@@ -79,11 +81,11 @@ $color_nhsuk-interruption-blue: #05538e;
   }
 
   &:hover {
-    box-shadow: 0 0 0 $card-hover-shadow-width $color_nhsuk-grey-4;
+    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-color;
   }
 
   &:active {
-    box-shadow: 0 0 0 $card-hover-shadow-width $color_nhsuk-grey-4;
+    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-color;
     bottom: - $card-hover-shadow-width;
   }
 }
@@ -134,7 +136,7 @@ $color_nhsuk-interruption-blue: #05538e;
   background: $color_nhsuk-blue;
   color: $color_nhsuk-white;
   display: inline-block;
-  left: 0;
+  left: - $card-shadow-width;
   padding: nhsuk-spacing(2) nhsuk-spacing(4);
   position: absolute;
   top: - nhsuk-spacing(3);
@@ -153,12 +155,12 @@ $color_nhsuk-interruption-blue: #05538e;
 
 .nhsuk-card--confirmation {
   background: shade($color_nhsuk-green, 10%);
-  box-shadow: 0 $card-shadow-width 0 0 shade($color_nhsuk-green, 40%);
+  box-shadow: 0 $card-shadow-width-bottom 0 0 shade($color_nhsuk-green, 40%);
 }
 
 .nhsuk-card--interruption {
   background: shade($color_nhsuk-blue, 20%);
-  box-shadow: 0 $card-shadow-width 0 0 shade($color_nhsuk-interruption-blue, 50%);
+  box-shadow: 0 $card-shadow-width-bottom 0 0 shade($color_nhsuk-interruption-blue, 50%);
 }
 
 .nhsuk-card--confirmation,
