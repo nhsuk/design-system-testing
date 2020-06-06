@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Smaller checkboxes and radios - Design system testing
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">Component</span>
+        Smaller checkboxes and radios
+      </h1>
+
+      <h2>Overview</h2>
+      <p>This component was proposed by the community in the <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/83">backlog (issue 83)</a>. The design and code is based on the GOV.UK Design System <a href="https://design-system.service.gov.uk/components/checkboxes/#smaller-checkboxes">checkboxes</a> and <a href="https://design-system.service.gov.uk/components/radios/#smaller-radios">radios</a>.</p>
+
+      <h2>Smaller checkboxes</h2>
+      <p>Use standard-sized checkboxes in nearly all cases. However, smaller versions work well on pages where it’s helpful to make them less visually prominent.</p>
+      <p>For example, on a page of search results, the primary user need is to see the results. Using smaller checkboxes lets users see and change search filters without distracting them from the main content. </p>
+      <p>Small checkboxes can work well on information dense screens in services designed for repeat use, like professional facing systems.</p>
+      <p>In services like these, the risk that they will not be noticed is lower because users return to the screen multiple times.</p>
+
+      <div class="app-example app-example--tag">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Priority
+              </h1>
+            </legend>
+            <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="organisation">
+                  Routine
+                </label>
+              </div>
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="organisation-2">
+                  2 week wait
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <h2 class="nhsuk-u-padding-top-4">Smaller radios</h2>
+      <p>Use standard-sized radios in nearly all cases. However, smaller versions work well on pages where it’s helpful to make them less visually prominent.</p>
+      <p>For example, on a page of search results, the primary user need is to see the results. Using smaller radios lets users see and change search filters without distracting them from the main content.</p>
+      <p>Small radios can work well on information dense screens in services designed for repeat use, like professional facing systems.</p>
+      <p>In services like these, the risk that they will not be noticed is lower because users return to the screen multiple times.</p>
+
+      <div class="app-example app-example--tag">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h1 class="nhsuk-fieldset__heading">
+                Type
+              </h1>
+            </legend>
+            <div class="nhsuk-radios nhsuk-radios--small">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="nhsuk-label nhsuk-radios__label" for="changed-name">
+                  Referral
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="nhsuk-label nhsuk-radios__label" for="changed-name-2">
+                  Advice
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      {{ backLink({
+        "href": "/",
+        "text": "Go back",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
