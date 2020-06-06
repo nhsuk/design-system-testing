@@ -25,7 +25,7 @@ $color_nhsuk-interruption-blue: #05538e;
   @include nhsuk-responsive-margin(6, 'bottom');
 
   background: $color_nhsuk-white;
-  box-shadow: 0 0 0 $card-shadow-width $card-shadow-color, 0 $card-shadow-width-bottom 0 $card-shadow-color;
+  box-shadow: 0 0 0 $card-shadow-width $card-shadow-color, 0 $card-shadow-width-bottom $card-shadow-width-bottom $card-shadow-color;
   outline: $card-shadow-width solid transparent; /* [1] */
   position: relative;
   width: 100%;
