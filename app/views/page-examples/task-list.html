@@ -1,0 +1,148 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        Task list
+      </h1>
+
+      <p class="nhsuk-u-margin-bottom-7">Confirm your details are correct to submit your electronic declaration for The Nye Practice.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> About your practice
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="practice-details-not-started">
+                  Practice details
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey app-task-list__task-tag" id="practice-details-not-started">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="practice-staff-started">
+                  Practice staff
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--white app-task-list__task-tag" id="practice-staff-started">Started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="practice-staff-started">
+                  Practice services
+                </a>
+              </span>
+              <strong class="nhsuk-tag app-task-list__task-tag" id="practice-staff-started">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="practice-staff-started">
+                  General practce IT
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey app-task-list__task-tag" id="practice-staff-started">Not started</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Practice regulations and procedures
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="company-information-completed">
+                  Practice premises and equipment
+                </a>
+              </span>
+              <strong class="nhsuk-tag app-task-list__task-tag" id="company-information-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-completed">
+                  Information about the practice and its procedures
+                </a>
+              </span>
+              <strong class="nhsuk-tag app-task-list__task-tag" id="contact-details-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#">
+                  Information and clinical governance
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey app-task-list__task-tag" id="practice-staff-started">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#">
+                  Registration with CQC (Care Quality Commission)
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey app-task-list__task-tag" id="practice-staff-started">Not started</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Supporting information
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#">
+                  Supporting information
+                </a>
+              </span>
+              <strong class="nhsuk-tag nhsuk-tag--grey app-task-list__task-tag" id="practice-staff-started">Not started</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Submit
+          </h2>
+          <ul class="app-task-list__items">
+            <li>
+              <p>You must complete all the sections before you can submit your electronic declaration.</p>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>  
+
+  </div>
+{% endblock %}
