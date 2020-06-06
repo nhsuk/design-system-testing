@@ -123,10 +123,10 @@ p code {
 
 .nhsuk-expander {
   background: $color_nhsuk-white;
-  box-shadow: 0 0 0 $card-shadow-width $card-shadow-color, 0 $card-shadow-width-bottom 0 $card-shadow-color;
+  box-shadow: 0 0 0 $card-shadow-width $card-shadow-color, 0 $card-shadow-width-bottom 0 0 $card-shadow-color;
 
   &:hover {
-    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-color;
+    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-hover-color;
   }
 
   .nhsuk-details__summary {
@@ -149,7 +149,7 @@ p code {
 }
 
 .nhsuk-expander-group > .nhsuk-details {
-  margin-bottom: nhsuk-spacing(1);
+  margin-bottom: 2px;
 }
 
 .nhsuk-details__text p {

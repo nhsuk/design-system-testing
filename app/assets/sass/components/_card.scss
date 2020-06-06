@@ -16,8 +16,9 @@
 
 $card-shadow-width: 1px;
 $card-shadow-width-bottom: 2px;
-$card-hover-shadow-width: 4px;
+$card-hover-shadow-width: 1px;
 $card-shadow-color: $color_nhsuk-grey-4;
+$card-shadow-hover-color: $color_nhsuk-grey-3;
 $color_nhsuk-interruption-blue: #05538e;
 
 .nhsuk-card {
@@ -81,11 +82,11 @@ $color_nhsuk-interruption-blue: #05538e;
   }
 
   &:hover {
-    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-color;
+    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-hover-color;
   }
 
   &:active {
-    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-color;
+    box-shadow: 0 0 0 $card-hover-shadow-width $card-shadow-hover-color;
     bottom: - $card-hover-shadow-width;
   }
 }
