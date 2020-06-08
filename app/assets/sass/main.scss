@@ -35,6 +35,7 @@
 @import 'components/callout';
 @import 'components/card';
 @import 'components/example-callout';
+@import 'components/expander';
 @import 'components/panel-confirmation';
 @import 'components/phase-banner';
 @import 'components/related-nav';
@@ -124,48 +125,4 @@ p code {
   }
 }
 
-.nhsuk-expander {
-  background: $color_nhsuk-white;
-  border: $card-border-width solid $card-border-color;
-  border-bottom-width: $card-border-width-bottom;
 
-  &:hover {
-    border-color: $card-border-hover-color;
-  }
-
-  .nhsuk-details__summary {
-    background: transparent;
-    border-top: 0;
-    padding: 16px 24px;
-
-    @include mq($from: desktop) {
-      padding: 24px 32px;
-    }
-  }
-
-  .nhsuk-details__summary[aria-expanded="true"] {
-    border-bottom: 1px solid $card-border-color;
-  }
-
-  .nhsuk-details__text {
-    @include nhsuk-responsive-padding(5);
-  }
-}
-
-.nhsuk-expander-group > .nhsuk-expander {
-  margin-bottom: -3px;
-}
-
-.nhsuk-details__text p {
-  @include nhsuk-responsive-margin(4, 'bottom');
-}
-
-.nhsuk-expander--grey {
-  background: $color_nhsuk-grey-5;
-  border-color: $color_nhsuk-grey-3;
-
-  &:hover {
-    border-color: $color_nhsuk-grey-2;
-  }
-
-}
