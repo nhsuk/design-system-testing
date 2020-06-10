@@ -13,10 +13,10 @@
   .nhsuk-details__summary {
     background: transparent;
     border-top: 0;
-    padding: nhsuk-spacing(3);
+    padding: 12px nhsuk-spacing(3);
 
     @include mq($from: desktop) {
-      padding: nhsuk-spacing(4);
+      padding: 20px nhsuk-spacing(4);
     }
   }
 
