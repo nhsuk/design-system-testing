@@ -1,3 +1,6 @@
+/* Expander
+   ========================================================================== */
+   
 .nhsuk-expander {
   background: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
@@ -21,14 +24,25 @@
     border-bottom: $card-border-width solid $card-border-color;
   }
 
+  .nhsuk-details__summary-text {
+    padding: nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(6);
+  }
+
   .nhsuk-details__text {
     @include nhsuk-responsive-padding(5);
   }
 }
 
+.nhsuk-details__text p {
+  @include nhsuk-responsive-margin(4, 'bottom');
+}
+
 .nhsuk-expander[open] {
   border-bottom-width: $card-border-width;
 }
+
+/* Expander group
+   ========================================================================== */
 
 .nhsuk-expander-group > .nhsuk-expander {
   margin-bottom: 0;
@@ -37,29 +51,30 @@
     border-bottom-width: 0;
 
     &:hover {
-      box-shadow: inset 0 -1px 0 0 $card-border-hover-color;
+      + .nhsuk-expander {
+        border-top: $card-border-width solid $card-border-hover-color;
+      }
     }
   }
 }
 
-.nhsuk-expander .nhsuk-details__summary-text {
-  padding: nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(6);
-}
 
-.nhsuk-details__text p {
-  @include nhsuk-responsive-margin(4, 'bottom');
-}
+/* Expander grey
+   ========================================================================== */
 
 .nhsuk-expander--grey {
   background: $color_nhsuk-grey-5;
 }
+
+/* Expander no border
+   ========================================================================== */
 
 .nhsuk-expander--no-border {
   border: 0;
 }
 
 .nhsuk-expander-group > .nhsuk-expander.nhsuk-expander--no-border {
-  margin-bottom: 1px;
+  margin-bottom: $card-border-width;
 
   &:hover {
     box-shadow: none;
