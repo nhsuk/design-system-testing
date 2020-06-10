@@ -2,7 +2,6 @@
    ========================================================================== */
    
 .nhsuk-expander {
-  background: $color_nhsuk-white;
   border: $card-border-width solid $card-border-color;
   border-bottom-width: $card-border-width-bottom;
 
@@ -11,7 +10,6 @@
   }
 
   .nhsuk-details__summary {
-    background: transparent;
     border-top: 0;
     padding: nhsuk-spacing(3);
 
@@ -58,7 +56,8 @@
 /* Expander grey
    ========================================================================== */
 
-.nhsuk-expander--grey {
+.nhsuk-expander--grey,
+.nhsuk-expander--grey .nhsuk-details__summary {
   background: $color_nhsuk-grey-5;
 }
 
