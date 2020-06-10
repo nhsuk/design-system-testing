@@ -90,7 +90,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
   &.nhsuk-card--clickable {
     &:hover{ 
       background: shade($color_nhsuk-green, 30%);
-      border-color: shade($color_nhsuk-green, 60%);
+      border-color: shade($color_nhsuk-green, 80%);
     }
   }
 }
@@ -102,7 +102,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
   &.nhsuk-card--clickable {
     &:hover{ 
       background: shade($color_nhsuk-blue, 30%);
-      border-color: shade($color_nhsuk-blue, 60%);
+      border-color: shade($color_nhsuk-blue, 80%);
     }
   }
 }
