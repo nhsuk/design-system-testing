@@ -13,10 +13,10 @@
   .nhsuk-details__summary {
     background: transparent;
     border-top: 0;
-    padding: 12px nhsuk-spacing(3);
+    padding: nhsuk-spacing(3);
 
     @include mq($from: desktop) {
-      padding: 20px nhsuk-spacing(4);
+      padding: nhsuk-spacing(4);
     }
   }
 
@@ -29,7 +29,11 @@
   }
 
   .nhsuk-details__text {
-    @include nhsuk-responsive-padding(5);
+    padding: nhsuk-spacing(4);
+
+    @include mq($from: desktop) {
+      padding: nhsuk-spacing(5);
+    }
   }
 }
 
