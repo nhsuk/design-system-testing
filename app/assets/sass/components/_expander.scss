@@ -25,11 +25,7 @@
   }
 
   .nhsuk-details__text {
-    padding: 0 nhsuk-spacing(4) nhsuk-spacing(4) nhsuk-spacing(4);
-
-    @include mq($from: desktop) {
-      padding: 0 nhsuk-spacing(5) nhsuk-spacing(5) nhsuk-spacing(5);
-    }
+    padding-top: 0;
   }
 }
 
