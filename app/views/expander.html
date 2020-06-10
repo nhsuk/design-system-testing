@@ -38,9 +38,36 @@
         }) }}
       </div>
 
-      <h2>Expander group</h2>
+      <h3>Expander group</h3>
       <div class="app-example app-example--tag">
         <div class="nhsuk-expander-group">
+          {{ details({
+            "classes": "nhsuk-expander",
+            "text": "How to measure your blood glucose levels",
+            "HTML": "
+            <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+            <p>You would have been given:</p>
+            <ul>
+              <li>a blood glucose metre</li>
+              <li>small needles called lancets</li>
+              <li>a plastic pen to hold the lancets</li>
+              <li>small test strips</li>
+            </ul>
+            "
+          }) }}
+          {{ details({
+            "classes": "nhsuk-expander",
+            "text": "When to check your blood glucose level",
+            "HTML": "
+            <p>Try to check your blood:</p>
+            <ul>
+              <li>before meals</li>
+              <li>2 to 3 hours after meals</li>
+              <li>before, during (take a break) and after exercise</li>
+            </ul>
+            <p>This helps you understand your blood glucose levels and how they’re affected by meals and exercise. It should help you have more stable blood glucose levels.</p>
+            "
+          }) }}
           {{ details({
             "classes": "nhsuk-expander",
             "text": "How to measure your blood glucose levels",
@@ -71,8 +98,8 @@
         </div>
       </div>
 
-      <h2>Expander grey</h2>
-      <div class="app-example app-example--tag">
+      <h3>Grey (white background)</h3>
+      <div class="app-example app-example--tag app-example--white">
         {{ details({
           "classes": "nhsuk-expander nhsuk-expander--grey",
           "text": "Get your medical records",
@@ -85,21 +112,10 @@
         }) }}
       </div>
 
-      <h2>Expander (white background)</h2>
-      <div class="app-example app-example--tag app-example--white">
+      <h3>With no border (colour background)</h3>
+      <div class="app-example app-example--tag app-example--blue">
         {{ details({
-          "classes": "nhsuk-expander",
-          "text": "Get your medical records",
-          "HTML": "
-          <p>You can see your GP records by:</p>
-          <ul>
-            <li>asking for them at your GP surgery </li>
-            <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-          </ul>"
-        }) }}
-
-        {{ details({
-          "classes": "nhsuk-expander nhsuk-expander--grey",
+          "classes": "nhsuk-expander nhsuk-expander--no-border",
           "text": "Get your medical records",
           "HTML": "
           <p>You can see your GP records by:</p>
