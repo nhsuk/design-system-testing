@@ -20,19 +20,15 @@
     }
   }
 
-  .nhsuk-details__summary[aria-expanded="true"] {
-    border-bottom: $card-border-width solid $card-border-color;
-  }
-
   .nhsuk-details__summary-text {
     padding: nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(6);
   }
 
   .nhsuk-details__text {
-    padding: nhsuk-spacing(4);
+    padding: 0 nhsuk-spacing(4) nhsuk-spacing(4) nhsuk-spacing(4);
 
     @include mq($from: desktop) {
-      padding: nhsuk-spacing(5);
+      padding: 0 nhsuk-spacing(5) nhsuk-spacing(5) nhsuk-spacing(5);
     }
   }
 }
