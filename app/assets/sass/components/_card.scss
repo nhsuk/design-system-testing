@@ -11,7 +11,6 @@ $card-border-hover-color: $color_nhsuk-grey-3;
   @include nhsuk-responsive-margin(6, 'bottom');
 
   background: $color_nhsuk-white;
-  box-shadow: none;
   border: $card-border-width solid $card-border-color;
   position: relative;
   width: 100%;
@@ -210,6 +209,9 @@ $card-border-hover-color: $color_nhsuk-grey-3;
   }
 
 }
+
+/* No border
+   ========================================================================== */
 
 .nhsuk-card--no-border {
   border: 0;
