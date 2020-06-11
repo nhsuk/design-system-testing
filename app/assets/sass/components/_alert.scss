@@ -68,9 +68,60 @@ $nhsuk-border-width-alert: 4px;
 .nhsuk-icon__info {
   fill: $color_nhsuk-blue;
   padding: 4px;
+  transform: rotate(180deg);
 }
 
 .nhsuk-icon__warning {
   fill: $color_nhsuk-red;
   padding: 4px;
+}
+
+/* Alert dismiss
+   ========================================================================== */
+
+.nhsuk-alert--dismiss {
+  padding-right: nhsuk-spacing(7);
+
+  @include mq($from: tablet) {
+    padding-right: nhsuk-spacing(8);
+  }
+}
+
+.nhsuk-alert--close {
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid $color_nhsuk-blue;
+  padding: 0;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+
+  @include mq($from: tablet) {
+    right: 16px;
+    top: 24px;
+  }
+
+  .nhsuk-icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  &:hover {
+    border-color: $nhsuk-link-hover-color;
+
+    .nhsuk-icon {
+      fill: $nhsuk-link-hover-color;
+    }
+  }
+
+  &:focus {
+    background: $nhsuk-focus-color;
+    border: 0;
+    box-shadow: 0 4px 0 0 $nhsuk-focus-text-color;
+    outline: 0;
+
+    .nhsuk-icon {
+      fill: $nhsuk-focus-text-color;
+    }
+  }
 }
