@@ -103,11 +103,9 @@ $nhsuk-border-width-alert: 4px;
   &:focus {
     background: $nhsuk-focus-color;
     border: 0;
-    box-shadow: 0 4px 0 0 $nhsuk-focus-text-color;
+    box-shadow: 0 $nhsuk-focus-width 0 0 $nhsuk-focus-text-color;
+    color: $nhsuk-focus-text-color;
     outline: 0;
-
-    .nhsuk-icon {
-      fill: $nhsuk-focus-text-color;
-    }
+    text-decoration: none;
   }
 }
