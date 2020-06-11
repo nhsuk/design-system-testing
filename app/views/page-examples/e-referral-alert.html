@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  e-Referral alert example page - Design system testing
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block backLink %}
+  {{ backLink({
+    "href": "/alert",
+    "text": "Go back to appointments",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {% include "includes/alert-variants/info.html" %}
+
+      <h1 class="nhsuk-heading-l">Appointment you have chosen</h1>
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Hospital"
+            },
+            value: {
+              text: "The Yorkshire Clinic"
+            }
+          },
+          {
+            key: {
+              text: "Ward"
+            },
+            value: {
+              text: "Adult Hernia Repair NHS Clinic"
+            }
+          },
+          {
+            key: {
+              text: "Date"
+            },
+            value: {
+              text: "Monday 16th March 2020"
+            }
+          },
+          {
+            key: {
+              text: "Time"
+            },
+            value: {
+              text: "9:00 am"
+            }
+          },
+          {
+            key: {
+              text: "Duration"
+            },
+            value: {
+              html: "30 mins"
+            }
+          }
+        ]
+      }) }}
+
+      {{ button({
+        "text": "Confirm and book"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
