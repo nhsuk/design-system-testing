@@ -14,7 +14,6 @@ $nhsuk-border-width-alert: 4px;
   @include nhsuk-responsive-padding(4);
 
   border: $nhsuk-border-width-alert solid $color_nhsuk-blue;
-  font-weight: 600;
   position: relative;
 
   @include mq($media-type: print) {
@@ -87,30 +86,18 @@ $nhsuk-border-width-alert: 4px;
 }
 
 .nhsuk-alert--close {
+  @include nhsuk-font($size: 16);
+
   background: 0;
   border: 0;
-  border-bottom: 1px solid $color_nhsuk-blue;
+  color: $nhsuk-link-color;
+  cursor: pointer;
   padding: 0;
-  position: absolute;
-  right: 12px;
-  top: 14px;
-
-  @include mq($from: tablet) {
-    right: 16px;
-    top: 24px;
-  }
-
-  .nhsuk-icon {
-    height: 24px;
-    width: 24px;
-  }
+  text-decoration: underline;
 
   &:hover {
-    border-color: $nhsuk-link-hover-color;
-
-    .nhsuk-icon {
-      fill: $nhsuk-link-hover-color;
-    }
+    color: $nhsuk-link-hover-color;
+    text-decoration: none;
   }
 
   &:focus {
