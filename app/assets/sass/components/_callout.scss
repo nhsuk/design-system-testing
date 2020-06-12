@@ -9,7 +9,7 @@
 
 $callout-border-width: nhsuk-spacing(2);
 $callout-highlight-border-width: nhsuk-spacing(2);
-$callout-urgent-border-width: nhsuk-spacing(3);
+$callout-urgent-border-width: nhsuk-spacing(2);
 $callout-border-bottom-width: 1px;
 
 .nhsuk-callout {
@@ -44,19 +44,19 @@ $callout-border-bottom-width: 1px;
 
 .nhsuk-callout--notice {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-bottom-width solid shade($color_nhsuk-blue, 30%);
+  border: $callout-border-bottom-width solid $color_nhsuk-blue;
   border-top: $callout-border-width solid $color_nhsuk-blue;
 }
 
 .nhsuk-callout--urgent {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-bottom-width solid shade($color_nhsuk-red, 30%);
+  border: $callout-border-bottom-width solid $color_nhsuk-red;
   border-top: $callout-urgent-border-width solid $color_nhsuk-red;
 }
 
 .nhsuk-callout--immediate {
   background: tint($color_nhsuk-red, 85%);
-  border-bottom: $callout-border-bottom-width solid shade($color_nhsuk-red, 30%);
+  border: $callout-border-bottom-width solid $color_nhsuk-red;
   border-top: $callout-urgent-border-width solid $color_nhsuk-red;
 }
 
