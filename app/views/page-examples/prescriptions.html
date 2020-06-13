@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Prescriptions NHS App example page - Design system testing
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block backLink %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">Prescriptions</h1>
+
+      {% include "includes/card-variants/card-group-app.html" %}
+
+    </div>
+  </div>
+{% endblock %}

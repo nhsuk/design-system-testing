@@ -14,7 +14,10 @@ $callout-border-bottom-width: 1px;
 
 .nhsuk-callout {
   @include top-and-bottom(); /* [1] */
-  @include nhsuk-responsive-padding(5);
+  @include nhsuk-responsive-padding(5,'bottom');
+  @include nhsuk-responsive-padding(4,'left');
+  @include nhsuk-responsive-padding(4,'right');
+  @include nhsuk-responsive-padding(5,'top');
 
   margin-bottom: nhsuk-spacing(5);
   margin-top: nhsuk-spacing(5);
@@ -32,8 +35,9 @@ $callout-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--highlight {
-  @include nhsuk-responsive-padding(4);
-
+  @include nhsuk-responsive-padding(4,'bottom');
+  @include nhsuk-responsive-padding(4,'top');
+  
   border-left: $callout-highlight-border-width solid $color_nhsuk-blue;
 }
 
@@ -75,12 +79,12 @@ $callout-border-bottom-width: 1px;
 
   display: inline-block;
   left: 0;
-  padding: nhsuk-spacing(2) nhsuk-spacing(4);
+  padding: nhsuk-spacing(2) nhsuk-spacing(3);
   position: absolute;
   top: - nhsuk-spacing(3);
 
   @include mq($from: desktop) {
-    padding: nhsuk-spacing(2) nhsuk-spacing(5);
+    padding: nhsuk-spacing(2) nhsuk-spacing(4);
   }
 }
 
@@ -118,14 +122,14 @@ $callout-border-bottom-width: 1px;
 
   border-top: 0;
   margin-bottom: nhsuk-spacing(5);
-  margin-left: - nhsuk-spacing(4);
-  margin-right: - nhsuk-spacing(4);
+  margin-left: - nhsuk-spacing(3);
+  margin-right: - nhsuk-spacing(3);
   margin-top: - nhsuk-spacing(4);
   position: relative;
 
   @include mq($from: desktop) {
-    margin-left: - nhsuk-spacing(5);
-    margin-right: - nhsuk-spacing(5);
+    margin-left: - nhsuk-spacing(4);
+    margin-right: - nhsuk-spacing(4);
     margin-top: - nhsuk-spacing(5);
   }
 }

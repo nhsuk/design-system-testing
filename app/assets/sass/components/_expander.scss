@@ -3,7 +3,7 @@
    
 .nhsuk-expander {
   border: $card-border-width solid $card-border-color;
-  border-bottom-width: $card-border-width-bottom;
+  border-bottom-width: $card-border-width;
 
   &:hover {
     border-color: $card-border-hover-color;
