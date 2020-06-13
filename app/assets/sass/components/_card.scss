@@ -186,11 +186,16 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
 .nhsuk-card-group {
   @include flex();
-  @include nhsuk-responsive-margin(2, 'bottom');  
+  @include nhsuk-responsive-margin(2, 'bottom');
+
+  padding: 0;
 }
 
 .nhsuk-card-group__item {
   @include flex-item();
+
+  margin-bottom: 0;
+  list-style-type: none;
 
   .nhsuk-card {
     @include nhsuk-responsive-margin(5, 'bottom');
@@ -201,13 +206,11 @@ $card-border-hover-color: $color_nhsuk-grey-3;
     &:last-child {
       margin-bottom: 0;
     }
-
   }
 
   .nhsuk-card--feature {
     margin-top: 0;
   }
-
 }
 
 /* No border
@@ -215,4 +218,66 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
 .nhsuk-card--no-border {
   border: 0;
+}
+
+/* With icon
+   ========================================================================== */
+
+.nhsuk-card--icon {
+  background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23aeb7bd' height='32' width='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+  background-position: right 16px top 50%;
+  background-repeat: no-repeat;
+
+  .nhsuk-card__heading {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .nhsuk-card__content {
+    padding-right: nhsuk-spacing(9);
+  }
+
+  &.nhsuk-card--clickable {
+    &:hover,
+    &:active {
+      .nhsuk-card__heading a {
+        text-decoration: underline;
+
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+/* Card mobile
+   ========================================================================== */
+
+@include mq($until: desktop) {
+  .nhsuk-card-mobile {
+    margin-left: -16px;
+    margin-right: -16px;
+
+    .nhsuk-card-group__item {
+      padding: 0;
+
+      &:not(:last-child){
+        .nhsuk-card {
+          border-bottom-width: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .nhsuk-card {
+      border-left: 0;
+      border-right: 0;
+
+      &:hover {
+        border-color: $card-border-color;
+      }
+    }
+  }
 }
