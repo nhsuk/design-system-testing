@@ -224,9 +224,13 @@ $card-border-hover-color: $color_nhsuk-grey-3;
    ========================================================================== */
 
 .nhsuk-card--icon {
-  background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23aeb7bd' height='32' width='32' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+  background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23768692' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
   background-position: right 16px top 50%;
   background-repeat: no-repeat;
+
+  &:hover {
+    background-image: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%237C2855' height='40' width='40' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E"); // sass-lint:disable-line quotes
+  }
 
   .nhsuk-card__heading {
     a {
@@ -257,8 +261,8 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
 @include mq($until: desktop) {
   .nhsuk-card-mobile {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: - $nhsuk-gutter-half;
+    margin-right: - $nhsuk-gutter-half;
 
     .nhsuk-card-group__item {
       padding: 0;
@@ -271,13 +275,29 @@ $card-border-hover-color: $color_nhsuk-grey-3;
       }
     }
 
-    .nhsuk-card {
+    .nhsuk-card {    
       border-left: 0;
       border-right: 0;
 
       &:hover {
         border-color: $card-border-color;
       }
+
+      &:active {
+        bottom: 0;
+      }
+    }
+
+    .nhsuk-card__content {
+      @include top-and-bottom();
+      
+      padding-bottom: nhsuk-spacing(3);
+      padding-left: nhsuk-spacing(3);
+      padding-top: nhsuk-spacing(3);
+    }
+
+    .nhsuk-card__heading {
+      margin-bottom: nhsuk-spacing(2);
     }
   }
 }
