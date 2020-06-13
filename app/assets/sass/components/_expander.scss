@@ -72,6 +72,8 @@
   margin-bottom: $card-border-width;
 
   &:hover {
-    box-shadow: none;
+    + .nhsuk-expander {
+      border-top: 0;
+    }
   }
 }
