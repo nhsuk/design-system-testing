@@ -187,11 +187,16 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
 .nhsuk-card-full-width {
   @include mq($until: desktop) {
-    margin-left: - ($nhsuk-gutter-half + $card-border-width);
-    margin-right: - ($nhsuk-gutter-half + $card-border-width);
+    margin-left: - $nhsuk-gutter-half;
+    margin-right: - $nhsuk-gutter-half;
 
     .nhsuk-card-group__item {
       padding: 0;
+    }
+
+    .nhsuk-card {
+      border-left-width: 0;
+      border-right-width: 0;
     }
   }
 }
