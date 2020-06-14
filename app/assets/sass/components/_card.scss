@@ -3,6 +3,7 @@
    ========================================================================== */
 
 $card-border-width: 1px;
+$card-border-bottom-width: 4px;
 $card-border-color: $color_nhsuk-grey-4;
 $card-border-hover-color: $color_nhsuk-grey-3;
 
@@ -24,7 +25,7 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 
 .nhsuk-card__content {
   @include top-and-bottom();
-  @include nhsuk-responsive-padding(4);
+  @include nhsuk-responsive-padding(5);
 
   position: relative;
 }
@@ -32,13 +33,14 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 .nhsuk-card__heading,
 .nhsuk-card__metadata,
 .nhsuk-card__description {
-  @include nhsuk-responsive-margin(3, 'bottom');
+  @include nhsuk-responsive-margin(4, 'bottom');
 }
 
 /* Clickable card
    ========================================================================== */
 
 .nhsuk-card--clickable {
+  border-bottom-width: $card-border-bottom-width;
 
   &:hover,
   &:active {
@@ -189,6 +191,22 @@ $card-border-hover-color: $color_nhsuk-grey-3;
     }
   }
 }
+
+/* Card app
+   ========================================================================== */
+
+  .nhsuk-card--app{
+    border-bottom-width: $card-border-width;
+
+    .nhsuk-card__content {
+      @include top-and-bottom();
+      @include nhsuk-responsive-padding(4);
+    }
+
+    .nhsuk-card__heading {
+      @include nhsuk-responsive-margin(3, 'bottom');
+    }
+  }
 
 /* With icon
    ========================================================================== */
