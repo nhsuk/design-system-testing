@@ -21,18 +21,10 @@
   .nhsuk-details__summary-text {
     padding: nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(6);
   }
-
-  .nhsuk-details__text {
-    padding-top: 0;
-  }
 }
 
 .nhsuk-details__text p {
   @include nhsuk-responsive-margin(4, 'bottom');
-}
-
-.nhsuk-expander[open] {
-  border-bottom-width: $card-border-width;
 }
 
 /* Expander group
