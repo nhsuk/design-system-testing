@@ -49,19 +49,19 @@ $callout-border-bottom-width: 1px;
 
 .nhsuk-callout--notice {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-width solid $color_nhsuk-blue;
+  border-bottom: $callout-border-width solid shade($color_nhsuk-blue, 10%);
   border-top: $callout-border-top-width solid $color_nhsuk-blue;
 }
 
 .nhsuk-callout--urgent {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-width solid $color_nhsuk-red;
+  border-bottom: $callout-border-width solid shade($color_nhsuk-red, 10%);
   border-top: $callout-border-top-width solid $color_nhsuk-red;
 }
 
 .nhsuk-callout--immediate {
   background: tint($color_nhsuk-red, 85%);
-  border-bottom: $callout-border-width solid $color_nhsuk-red;
+  border-bottom: $callout-border-width solid shade($color_nhsuk-red, 10%);
   border-top: $callout-border-top-width solid $color_nhsuk-red;
 }
 
