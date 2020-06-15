@@ -75,12 +75,12 @@ $callout-border-bottom-width: 1px;
 
   display: inline-block;
   left: 0;
-  padding: nhsuk-spacing(2) nhsuk-spacing(3);
+  padding: nhsuk-spacing(2) nhsuk-spacing(4);
   position: absolute;
   top: - nhsuk-spacing(3);
 
   @include mq($from: desktop) {
-    padding: nhsuk-spacing(2) nhsuk-spacing(4);
+    padding: nhsuk-spacing(2) nhsuk-spacing(5);
   }
 }
 
