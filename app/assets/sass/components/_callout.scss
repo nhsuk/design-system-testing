@@ -9,15 +9,12 @@
 
 $callout-border-width: 1px;
 $callout-highlight-border-width: nhsuk-spacing(2);
-$callout-border-top-width: nhsuk-spacing(2);
+$callout-border-top-width: 12px;
 $callout-border-bottom-width: 1px;
 
 .nhsuk-callout {
   @include top-and-bottom(); /* [1] */
-  @include nhsuk-responsive-padding(5,'bottom');
-  @include nhsuk-responsive-padding(4,'left');
-  @include nhsuk-responsive-padding(4,'right');
-  @include nhsuk-responsive-padding(5,'top');
+  @include nhsuk-responsive-padding(5);
 
   margin-bottom: nhsuk-spacing(5);
   margin-top: nhsuk-spacing(5);
@@ -35,8 +32,7 @@ $callout-border-bottom-width: 1px;
 }
 
 .nhsuk-callout--highlight {
-  @include nhsuk-responsive-padding(4,'bottom');
-  @include nhsuk-responsive-padding(4,'top');
+  @include nhsuk-responsive-padding(4);
   
   border-left: $callout-highlight-border-width solid $color_nhsuk-blue;
 }
@@ -49,19 +45,19 @@ $callout-border-bottom-width: 1px;
 
 .nhsuk-callout--notice {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-width solid shade($color_nhsuk-blue, 10%);
+  border-bottom: $callout-border-width solid $color_nhsuk-grey-4;
   border-top: $callout-border-top-width solid $color_nhsuk-blue;
 }
 
 .nhsuk-callout--urgent {
   background: $color_nhsuk-white;
-  border-bottom: $callout-border-width solid shade($color_nhsuk-red, 10%);
+  border-bottom: $callout-border-width solid $color_nhsuk-grey-4;
   border-top: $callout-border-top-width solid $color_nhsuk-red;
 }
 
 .nhsuk-callout--immediate {
   background: tint($color_nhsuk-red, 85%);
-  border-bottom: $callout-border-width solid shade($color_nhsuk-red, 10%);
+  border-bottom: $callout-border-width solid tint($color_nhsuk-red, 60%);
   border-top: $callout-border-top-width solid $color_nhsuk-red;
 }
 
@@ -124,14 +120,14 @@ $callout-border-bottom-width: 1px;
 
   border-top: 0;
   margin-bottom: nhsuk-spacing(5);
-  margin-left: - nhsuk-spacing(3);
-  margin-right: - nhsuk-spacing(3);
+  margin-left: - nhsuk-spacing(4);
+  margin-right: - nhsuk-spacing(4);
   margin-top: - nhsuk-spacing(4);
   position: relative;
 
   @include mq($from: desktop) {
-    margin-left: - nhsuk-spacing(4);
-    margin-right: - nhsuk-spacing(4);
+    margin-left: - nhsuk-spacing(5);
+    margin-right: - nhsuk-spacing(5);
     margin-top: - nhsuk-spacing(5);
   }
 }
