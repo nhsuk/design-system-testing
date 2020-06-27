@@ -40,7 +40,7 @@ $callout-border-bottom-width: 1px;
 .nhsuk-callout--warning {
   background: tint($color_nhsuk-yellow, 70%);
   border-bottom: $callout-border-bottom-width solid shade($color_nhsuk-yellow, 5%);
-  border-top: $callout-border-top-width solid $color_nhsuk-yellow;
+  border-top: $callout-border-bottom-width solid shade($color_nhsuk-yellow, 5%);
 }
 
 .nhsuk-callout--notice {
@@ -113,16 +113,16 @@ $callout-border-bottom-width: 1px;
 .nhsuk-callout__heading--block {
   @include nhsuk-font($size: 24, $weight: bold);
 
-  @include nhsuk-responsive-padding(3, 'bottom');
   @include nhsuk-responsive-padding(5, 'left');
   @include nhsuk-responsive-padding(5, 'right');
-  @include nhsuk-responsive-padding(3, 'top');
 
   border-top: 0;
   margin-bottom: nhsuk-spacing(5);
   margin-left: - nhsuk-spacing(4);
   margin-right: - nhsuk-spacing(4);
   margin-top: - nhsuk-spacing(4);
+  padding-bottom: nhsuk-spacing(3);
+  padding-top: nhsuk-spacing(3);
   position: relative;
 
   @include mq($from: desktop) {
