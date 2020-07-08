@@ -39,6 +39,10 @@
   @include nhsuk-responsive-margin(4, 'bottom');
 }
 
+.nhsuk-expander[open] {
+  border-bottom-width: $card-border-width;
+}
+
 /* Expander group
    ========================================================================== */
 
