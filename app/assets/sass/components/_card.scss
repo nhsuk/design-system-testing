@@ -265,6 +265,10 @@ $card-border-hover-color: $color_nhsuk-grey-3;
     &:hover{ 
       background-color: shade($color_nhsuk-green, 30%);
       border-color: shade($color_nhsuk-green, 80%);
+
+      a {
+        color: $color_nhsuk-white;
+      }
     }
   }
 }
@@ -277,6 +281,10 @@ $card-border-hover-color: $color_nhsuk-grey-3;
     &:hover{ 
       background-color: shade($color_nhsuk-blue, 30%);
       border-color: shade($color_nhsuk-blue, 80%);
+
+      a {
+        color: $color_nhsuk-white;
+      }
     }
   }
 }
