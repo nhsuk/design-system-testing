@@ -160,14 +160,11 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 }
 
 .nhsuk-card-group--list {
-  @include mq($until: desktop) {
-
-    .nhsuk-card-group__item {
-      &:not(:last-child){
-        .nhsuk-card {
-          border-bottom-width: 0;
-          margin-bottom: 0;
-        }
+  .nhsuk-card-group__item {
+    &:not(:last-child){
+      .nhsuk-card {
+        border-bottom-width: 0;
+        margin-bottom: 0;
       }
     }
   }
@@ -195,18 +192,18 @@ $card-border-hover-color: $color_nhsuk-grey-3;
 /* Card app
    ========================================================================== */
 
-  .nhsuk-card--app{
-    border-bottom-width: $card-border-width;
+.nhsuk-card--app{
+  border-bottom-width: $card-border-width;
 
-    .nhsuk-card__content {
-      @include top-and-bottom();
-      @include nhsuk-responsive-padding(4);
-    }
-
-    .nhsuk-card__heading {
-      @include nhsuk-responsive-margin(3, 'bottom');
-    }
+  .nhsuk-card__content {
+    @include top-and-bottom();
+    @include nhsuk-responsive-padding(4);
   }
+
+  .nhsuk-card__heading {
+    @include nhsuk-responsive-margin(3, 'bottom');
+  }
+}
 
 /* With icon
    ========================================================================== */
