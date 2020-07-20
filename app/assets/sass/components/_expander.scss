@@ -1,12 +1,17 @@
 /* Expander
    ========================================================================== */
+
+$expander-border-width: 1px;
+$expander-border-bottom-width: nhsuk-spacing(1);
+$expander-border-color: $color_nhsuk-grey-4;
+$expander-border-hover-color: $color_nhsuk-grey-3;
    
 .nhsuk-expander {
-  border: $card-border-width solid $card-border-color;
-  border-bottom-width: $card-border-bottom-width;
+  border: $expander-border-width solid $expander-border-color;
+  border-bottom-width: $expander-border-bottom-width;
 
   &:hover {
-    border-color: $card-border-hover-color;
+    border-color: $expander-border-hover-color;
 
     .nhsuk-details__summary-text {
       text-decoration: underline;
@@ -40,7 +45,7 @@
 }
 
 .nhsuk-expander[open] {
-  border-bottom-width: $card-border-width;
+  border-bottom-width: $expander-border-width;
 }
 
 /* Expander group
