@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Loader (spinner) - Design system testing
+  Loading spinner - Design system testing
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,10 +20,16 @@
 
       <h1>
         <span class="nhsuk-caption-l">New component</span>
-        Loader (Spinner)
+        Loading spinner
       </h1>
 
-      <h2>Loader variations</h2>
+      <h2>Overview</h2>
+      <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/255">Backlog issue 255 (GitHub)</a></p>
+
+      <h2>When to use a loading spinner</h2>
+      <p>Help users understand that they need to wait for something to happen.</p>
+
+      <h2>Loading spinner variations</h2>
 
       <h3>Default</h3>
       <div class="app-example app-example--tag">
@@ -36,7 +42,7 @@
       <div class="app-example app-example--tag">
         <div class="nhsuk-loader">
           <span class="nhsuk-loader__spinner"></span>
-          <span class="nhsuk-loader__text">Checking your email address</span>
+          <span class="nhsuk-loader__text">Loading</span>
         </div>
       </div>
 
@@ -47,6 +53,17 @@
           <span class="nhsuk-loader__text">Searching for your location</span>
         </div>
       </div>
+
+      <h3>White for colour backgrounds</h3>
+      <div class="app-example app-example--tag app-example--blue">
+        <div class="nhsuk-loader nhsuk-loader--white">
+          <span class="nhsuk-loader__spinner"></span>
+          <span class="nhsuk-loader__text">Loading</span>
+        </div>
+      </div>
+
+      <h2>Accessbility</h2>
+      <p>Need to look at including a <code>prefers-reduced-motion</code> media query to replace the image with "Loading…" text if requested.</p>
 
       {{ backLink({
         "href": "/",

@@ -1,45 +1,31 @@
-<!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
-  In /views/layout.html you can:
-    - change the header and footer 
-    - add custom CSS and JavaScript
--->
 
-<!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
   Alert - Design system testing
 {% endblock %}
 
-<!-- Breadcrumb goes inside the beforeContent block -->
-<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-  <!-- Breadcrumb -->
   {{ breadcrumb({
     href: "/",
     text: "Home"
   }) }}
 {% endblock %}
 
-<!-- Your page content goes inside the content block -->
-<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
   <div class="nhsuk-grid-row">
 
     <div class="nhsuk-grid-column-two-thirds">
 
-      <!-- Change the page title here -->
       <h1>
         <span class="nhsuk-caption-l">New component</span>
         Alert
       </h1>
 
       <h2>Overview</h2>
-      <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/175">Backlog issue - GitHub</a></p>
+      <p><a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/175">Backlog issue 175 (GitHub)</a></p>
 
       <h2>When to use an alert</h2>
-
       <p>Use the alert to display a prominent message and related actions to take.</p>
 
       <h2>Alert variations</h2>
