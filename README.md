@@ -1,10 +1,10 @@
 # NHS digital service manual (design system testing)
 
-Visit the <a href="https://nhsuk-design-system-testing.herokuapp.com/">design system testing site</a> to see what design styles, components and patterns that need testing.
+Visit the <a href="https://nhsuk-design-system-testing.herokuapp.com/">design system testing site</a> to see what design styles, components and patterns are in development.
 
 ## About the design system testing
 
-All the design styles, components and patterns are in development and have been proposed by the community in the <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/1">community backlog</a> for the <a href="https://service-manual.nhs.uk/">design system</a>.
+All the design styles, components and patterns have been proposed by the community in the <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/1">community backlog</a> for the <a href="https://service-manual.nhs.uk/">design system</a>.
 
 To ensure the styles, components and pattern meet user needs and the code is robust and accessible. The service manual team needs teams from across the NHS to test the styles, components and patterns and feedback on how they tested.
 
