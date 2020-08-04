@@ -1,26 +1,17 @@
-# NHS.UK prototype kit
+# NHS digital service manual (design system) testing
 
-Visit the <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit site</a> to download the latest version and read the documentation.
+Visit the <a href="https://nhsuk-design-system-testing.herokuapp.com/">design system testing site</a> to see what design styles, components and patterns are being tested.
 
-## About the NHS.UK prototype kit
+## About the design system testing
 
-The NHS.UK prototype kit enables you to make interactive prototypes that will look like pages on NHS.UK. The prototypes you make are a great way to show ideas to others and for conducting user research.
+All the design styles, components and patterns have been proposed by the community in the <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/1">community backlog</a> for the <a href="https://service-manual.nhs.uk/">design system</a>.
 
-## Security
-
-If you publish your prototypes online, they must be protected by a <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs/how-tos/heroku">username and password</a>. This is to prevent members of the public finding prototypes and thinking they are real services.
-
-You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like NHS.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
-
-## Installation instructions
-
-- <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs/install/simple">Install guide (non technical)</a>
-- <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs/install/advanced">Developer friendly install guide (technical)</a>
+To ensure the styles, components and pattern meet user needs and the code is robust and accessible. The service manual team needs teams from across the NHS to test the styles, components and patterns and feedback on how they tested.
 
 ## Contribute
 
-If you want to contribute to the NHS.UK prototype kit, by reporting bugs, fixing bugs, suggesting new features or writing documentation, then read our [contributing guidelines](CONTRIBUTING.md).
+Users of the design system can contribute by feeding back how the styles, components and patterns tested in the <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/projects/1">community backlog</a>.
 
 ## Support
 
-The NHS.UK prototype kit is maintained by NHS Digital. [Email us](mailto:service-manual@nhs.net), open a [Github issue](https://github.com/nhsuk/nhsuk-prototype-kit/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE).
+The design system is maintained by service manual team at NHS Digital. [Email us](mailto:service-manual@nhs.net), open a [Github issue](https://github.com/nhsuk/design-system-testing/issues/new) or get in touch on the [NHS digital service manual Slack workspace](https://join.slack.com/t/nhs-service-manual/shared_invite/enQtNTIyOTEyNjU3NDkyLTk4NDQ3YzkwYzk1Njk5YjAxYTI5YTVkZmUxMGQ0ZjA3NjMyM2ZkNjBlMWMxODVjZjYzNzg1ZmU4MWY1NmE2YzE).
