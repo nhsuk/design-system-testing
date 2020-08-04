@@ -1,4 +1,4 @@
-# NHS digital service manual (design system testing)
+# NHS digital service manual (design system) testing
 
 Visit the <a href="https://nhsuk-design-system-testing.herokuapp.com/">design system testing site</a> to see what design styles, components and patterns are in development.
 
