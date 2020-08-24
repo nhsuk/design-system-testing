@@ -1,0 +1,106 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Card draft guidance - Design system testing
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">Draft guidance</span>
+        Card
+      </h1>
+
+      <h2>When to use a card</h2>
+      <p>Use a card component to provide a brief summary of content or a task, often with a link to more detail. Cards are frequently displayed alongside other cards to group related content or tasks.</p>
+
+      <h2>Basic card</h2>
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/basic.html" %}
+      </div>
+
+      <h2>Clickable card</h2>
+      <p>For cards that contain a single link, the hit area for that link can be made to wrap the entire card.</p>
+      <p>We avoid wrapping an entire card in an anchor tag as this can be a difficult experience for a screen reader user.</p>
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/clickable.html" %}
+      </div>
+
+      <h2>Card with image</h2>
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/image.html" %}
+      </div>
+
+      <h2>Card with video</h2>
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/video.html" %}
+      </div>
+
+      <h2>Card with grey background</h2>
+      <p>For cards on a white background.</p>
+      
+      <div class="app-example app-example--tag app-example--white">
+        {% include "includes/card-variants/grey.html" %}
+      </div>
+
+      <h2>Card group</h2>
+      <p>Multiple cards can be grouped to display a collection related topics.</p>
+      <p>We define the width of the cards using the <a href="https://service-manual.nhs.uk/design-system/styles/layout#grid">grid system</a>.</p>
+
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h3>One-half</h3>
+      <p>For example, <code>nhsuk-grid-column-one-half</code> is used to make the cards half width.</p>
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/card-group-half.html" %}
+      </div>
+
+      <h3>One-third</h3>
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/card-group-third.html" %}
+      </div>
+
+      <h3>One-quarter</h3>
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/card-group-quarter.html" %}
+      </div>
+
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h2>Accessibility</h2>
+      
+      <h3>Heading level and size</h2>
+
+      <p><a href="https://service-manual.nhs.uk/accessibility/design#use-headings-correctly">Make sure your headings reflect the page structure</a> by changing the level of the heading.</p>
+      <p>Here's an example of replacing the default <code>h3</code> heading with a <code>h2</code>:</p>
+      
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/accessibility-heading.html" %}
+      </div>
+
+      <p>You can change the size of the heading using <a href="https://service-manual.nhs.uk/design-system/styles/typography#headings">heading typography styles</a>.</p>
+      <p>Here's an example of using a <code>h2</code> with a <code>nhsuk-heading-l</code> class to reduce the heading size:</p>
+
+      <div class="app-example app-example--tag">
+        {% include "includes/card-variants/accessibility-heading-class.html" %}
+      </div>
+
+    </div>  
+  </div>
+{% endblock %}
