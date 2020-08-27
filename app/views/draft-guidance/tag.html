@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Tag draft guidance - Design system testing
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        <span class="nhsuk-caption-l">Draft guidance</span>
+        Tag
+      </h1>
+
+      <h2>When to use a tag</h2>
+      <p>Use the tag component when it’s possible for something to have more than one status and it’s useful for the user to know about that status.</p>
+
+      <h2>How it works</h2>
+      <p>Tags are just used to indicate a status, so do not add links. Use adjectives rather than verbs for the names of your tags. Using a verb might make a user think that clicking on them will do something.</p>
+
+      <h2>Showing one or two statuses</h2>
+      <p>Sometimes a single status is enough. For example if you need to tell users which parts of an application they’ve finished and which they haven’t, you may only need a ‘Completed’ tag. Because the user understands that if something doesn’t have a tag, that means it’s incomplete.</p>
+      <p>Or it can make sense to have two statuses. For example you may find that there’s a need to have one tag for ‘Active’ users and one for ‘Inactive’ users.</p>
+      
+      <div class="app-example app-example--tag">
+        {% include "includes/tag-variants/two-statuses.html" %}
+      </div>
+
+      <h2>Showing multiple statuses</h2>
+      <p>Tags should be helpful to users. The more you add, the harder it is for users to remember them. So start with the smallest number of statuses you think might work, then add more if your user research shows there’s a need for them.</p>
+
+      <div class="app-example app-example--tag">
+        {% include "includes/tag-variants/multiple-statuses.html" %}
+      </div>
+
+      <h2>Using colour with tags</h2>
+      <p>You can use colour to help distinguish between different tags – or to help draw the user’s attention to a tag if it’s especially important. For example, it probably makes sense to use  <code>govuk-tag--red</code> for a tag that reads ‘Urgent’.</p>
+      <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">Do not use colour alone to convey information</a> because it’s not accessible. If you use the same tag in more than one place, make sure you keep the colour consistent.</p>
+      <p>Because tags with solid colours tend to stand out more, it’s usually best to avoid mixing solid colours and tints: use one or the other. This matters less if you’re only using two colours. For example, it’s okay to use the tint <code>govuk-tag--grey</code> and solid blue tags together if you only need two statuses.</p>
+
+      <h3>Additional colours</h3>
+      <p>If you need more tag colours, you can use the following tints.</p>
+
+      <div class="app-example app-example--tag">
+        {% include "includes/tag-variants/colours.html" %}
+      </div>
+
+      <h3 id="accessibility">Accessibility</h3>
+      <p>All contrasts between text and background meet level AAA of WCAG 2.0. Read more about <a href="https://service-manual.nhs.uk/design-system/styles/colour#accessibility">accessibility and colour</a>.</p>
+
+      <h2>Research</h2>
+
+    </div>  
+  </div>
+{% endblock %}
