@@ -54,19 +54,3 @@ $expander-border-hover-color: $color_nhsuk-grey-3;
 .nhsuk-expander-group > .nhsuk-expander {
   margin-bottom: nhsuk-spacing(2);
 }
-
-
-/* Expander grey
-   ========================================================================== */
-
-.nhsuk-expander--grey,
-.nhsuk-expander--grey .nhsuk-details__summary {
-  background: $color_nhsuk-grey-5;
-}
-
-/* Expander no border
-   ========================================================================== */
-
-.nhsuk-expander--no-border {
-  border: 0;
-}
