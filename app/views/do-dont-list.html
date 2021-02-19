@@ -18,16 +18,20 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        <span class="nhsuk-caption-l">Proposal to update guidance</span>
         Do and don't list
       </h1>
 
-      <h2>Overview</h2>
-      <p>Proposing to rewrite the <a href="https://service-manual.nhs.uk/design-system/components/do-and-dont-lists">do and don't list</a> component as a design pattern, remove the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">do and don't list code</a> and build the pattern using existing styles and components.</p>
+      <h2>Proposal</h2>
+      <P>We are proposing to:</p>
+      <ul>
+        <li>rewrite the <a href="https://service-manual.nhs.uk/design-system/components/do-and-dont-lists">do and don't list</a> component as a design pattern</li>
+        <li>remove the <a href="https://github.com/nhsuk/nhsuk-frontend/tree/master/packages/components/do-dont-list">do and don't list code</a> from the frontend and build the pattern using other styles and components</li>
+      </ul>
 
-      <h2>Styles</h2>
-      <p>The ticks and crosses list style would be decoupled from the component and added to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
-      <h3>Ticks</h3>
+      <h2>Code implementation</h2>
+      <h3>Ticks and crosses list style</h3>
+      <p>The ticks and crosses would get added as a <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list style in typography</a>.</p>
+      <h4>Ticks</h4>
       <div class="app-example app-example--tag">
         <ul class="nhsuk-list nhsuk-list--tick">
           <li>
@@ -51,7 +55,7 @@
         </ul>
       </div>
 
-      <h3>Crosses</h3>
+      <h4>Crosses</h4>
       <div class="app-example app-example--tag">
         <ul class="nhsuk-list nhsuk-list--cross">
           <li>
@@ -78,7 +82,7 @@
         </ul>
       </div>
 
-        <h3>Ticks and crosses</h3>
+        <h4>Ticks and crosses</h4>
         <div class="app-example app-example--tag">
           <ul class="nhsuk-list nhsuk-list--cross">
             <li>
@@ -104,22 +108,86 @@
         </div>
         
 
-        <h2>Components</h2>
-        <p>The new pattern would use the <a href="/card">card</a> component.</p>
+        <h3>Feature card component</h3>
 
-        <h3>Feature card</h3>
+        <p>The <a href="">feature card</a> is already in the design system.</p>
+
         <div class="app-example app-example--tag">
-          {% include "includes/card-variants/feature.html" %}
+          {{ card({
+            "feature": "true",
+            "heading": "Feature card heading",
+            "headingClasses": "nhsuk-heading-m",
+            "description": "Feature card description"
+          }) }}
         </div>
         
-        <h2>Patterns</h2>
-        <p>The component guidance would be rewritten as design pattern: <strong>"Help users understand more easily what they should and shouldn't do"</strong>.</p>
-        <p>Also, the same styles and components could be utilised for other design patterns — for example the <strong>"Help users understand what they can and can't do"</strong> pattern used on the NHS App.</p>
+        <h2>Pattern</h2>
+        <p>The pattern could be something like <strong>"Help users understand what they should and shouldn't do"</strong> and built using the feature card component and ticks and crosses list style.</p>
+
+        <div class="app-example app-example--tag">
+          {{ card({
+            "feature": "true",
+            "heading": "Do",
+            "headingClasses": "nhsuk-heading-m",
+            "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--tick'>
+          <li>
+            <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+              <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
+            </svg>
+            use a soft toothbrush to brush your teeth
+          </li>
+          <li>
+            <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+              <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
+            </svg>
+            brush your tongue or use a scraper to help improve a white tongue
+          </li>
+          <li>
+            <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+              <path stroke-width='4' stroke-linecap='round' d='M18.4 7.8l-8.5 8.4L5.6 12'></path>
+            </svg>
+            use a straw to drink cool drinks
+          </li>
+        </ul>"
+          }) }}
+
+          {{ card({
+            "feature": "true",
+            "heading": "Don't",
+            "headingClasses": "nhsuk-heading-m",
+            "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--tick'>
+          <li>
+            <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
+                <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
+                <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
+              </svg>
+            do not use a toothpaste that contains sodium lauryl sulphate
+          </li>
+          <li>
+            <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
+                <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
+                <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
+              </svg>
+            do not smoke
+          </li>
+          <li>
+            <svg class='nhsuk-icon nhsuk-icon__cross' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'>
+                <path d='M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z'></path>
+                <path d='M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z'></path>
+              </svg>
+            do not drink alcohol
+          </li>
+        </ul>"
+          }) }}
+        </div>
+
+        <p>Other design patterns could use the same styles and components.</p>
+        <p>For example, the <strong>"Help users understand what they can and can't do"</strong> pattern used on the NHS App.</p>
         
         <div class="app-example app-example--tag">
           <div class="nhsuk-card">
             <div class="nhsuk-card__content">
-              <h3 class="nhsuk-card__heading">Services you can access for Kevin</h3>
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">Services you can access for Kevin</h2>
               <ul class='nhsuk-list nhsuk-list--cross'>
                 <li>
                   <svg class='nhsuk-icon nhsuk-icon__tick' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' aria-hidden='true'>

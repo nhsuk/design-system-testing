@@ -33,13 +33,11 @@
 // Components that are not in the NHS.UK frontend library
 @import 'components/alert';
 @import 'components/callout';
-@import 'components/card';
 @import 'components/example-callout';
 @import 'components/expander';
 @import 'components/loading-spinner';
 @import 'components/small-checkboxes';
 @import 'components/small-radios';
-@import 'components/tag';
 @import 'components/task-list';
 
 ///////////////////////////////////////////
@@ -127,3 +125,6 @@ section + section > h2 {
   padding-top: 16px;
 }
 
+.nhsuk-header__logo--only .nhsuk-header__link--service {
+  max-width: 100%;
+}
