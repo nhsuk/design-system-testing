@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  List panel - Design system testing
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Nav A-Z
+      </h1>
+
+      <h2>Proposal</h2>
+      <p>We are proposing to:</p>
+      <ul>
+        <li>remove the Nav A-Z component</li>
+        <li>build Nav A-Z with typography styles and utility classes</li>
+      </ul>
+
+      {{ backLink({
+        "href": "/",
+        "text": "Go back",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+        
+    </div>  
+
+  </div>
+{% endblock %}

@@ -18,16 +18,19 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        <span class="nhsuk-caption-l">Refactoring components</span>
         List panel
       </h1>
 
-      <h2>Overview</h2>
-      <p>The list panel component, used in the A to Z page pattern could be refactored using the list border style and panel component, and all the <a href="https://nhsuk.github.io/nhsuk-frontend/components/list-panel/index.html">code for the list panel</a> could be removed.</p>
+      <h2>Proposal</h2>
+      <p>We are proposing to:</p>
+      <ul>
+        <li>remove the list panel component</li>
+        <li>build a list panel with a card component, typography styles and utility classes</li>
+      </ul>
 
       <h2>Styles</h2>
-      <h3>Typography > List</h3>
-      <p>The <code>nhsuk-list--border</code> style would need adding to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
+      <p>We could add a <code>nhsuk-list--border</code> style to the <a href="https://service-manual.nhs.uk/design-system/styles/typography#lists">list styles in typography</a>.</p>
+      <p>The list border style is being used on the <a href="https://service-manual.nhs.uk/search/?search-field=test">service manual</a> and NHS website search pages.</p>
 
       <div class="app-example app-example--tag">
         <ul class="nhsuk-list nhsuk-list--border">
@@ -52,35 +55,44 @@
       </div>
 
       <h2>Components</h2>
-      <p>The existing card component can be used.</p>
-      <h3>card with label</h3>
+      <p>We could use the list border style in the card component.</p>
 
       <div class="app-example app-example--tag">
         {{ card({
-          "label": "card header",
-          "HTML": "<p>card content</p>"
+          "feature": "true",
+          "heading": "A",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
+          <li><a href='#'>AAA</a></li>
+          <li><a href='#'>AAA screening</a></li>
+        </ul>"
         }) }}
       </div>
 
       <h2>Pattern</h2>
-      <p>The <a href="https://service-manual.nhs.uk/design-system/patterns/a-to-z-page">A to Z page</a> pattern already exisits in the design system.</p>
+      <p>The <a href="https://service-manual.nhs.uk/design-system/patterns/a-to-z-page">A to Z page</a> guidance in the design system could stay the same. We would just update the code examples.</p>
 
       <div class="app-example app-example--tag">
         {{ card({
-          "label": "A",
-          "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
+          "feature": "true",
+          "heading": "A",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
           <li><a href='#'>AAA</a></li>
           <li><a href='#'>AAA screening</a></li>
         </ul>"
         }) }}
 
         {{ card({
-          "label": "B",
-          "HTML": "<ul class='nhsuk-list nhsuk-list--border'>
+          "feature": "true",
+          "heading": "B",
+          "headingClasses": "nhsuk-u-font-size-24",
+          "descriptionHtml": "<ul class='nhsuk-list nhsuk-list--border'>
           <li><a href='#'>Back pain</a></li>
           <li><a href='#'>Bed bugs</a></li>
         </ul>"
         }) }}
+
       </div>
 
       {{ backLink({
